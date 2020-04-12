@@ -46,9 +46,12 @@ lib32-alsa-plugins lib32-libpulse lib32-alsa-oss lib32-openal wine winetricks pl
 
 global theme: Breath2
 plasma: breath2
+application style: default
+application style -> GTK2: Breath Dark
+application style -> GTK3: Breath Dark
 colors: Breath2Dark
 icons: Breath2 Dark
-markers: HighContrast
+cursors: HighContrast
 window decorations: remove left icon and question mark
 wallpaper: #14191d
 widget: digital clock lite
@@ -58,6 +61,18 @@ monospace font: Source Code Pro 10, 14
 # installation af st
 
 git clone https://git.suckless.org/st
+
+patches kan gemmes som alm. tekst-filer
+
+kommando til at patche: patch -Np1 -i PATCH
+
+patch -Np1 -i st-no_bold_colors-20170623-b331da5.diff
+patch -Np1 -i st-solarized-dark-20180411-041912a.diff
+patch -Np1 -i st-scrollback-20200504-28ad288.diff
+patch -Np1 -i st-scrollback-mouse-20191024-a2c479c.diff
+patch -Np1 -i st-scrollback-mouse-altscreen-20191024-a2c479c.diff
+patch -Np1 -i st-scrollback-mouse-increment-0.8.2.diff
+patch -Np1 -i st-workingdir-20200317-51e19ea.diff
 
 patches for solarized og scrollback kan findes her: https://st.suckless.org/patches/
 
