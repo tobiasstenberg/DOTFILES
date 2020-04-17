@@ -1,23 +1,23 @@
 # MANJARO KDE PLASMA RICE
 
 ## to do
- opsætning af polybar
+konfiguration af rofi
 
 ## tjekliste efter startup
- link til god vid om ting man skal gøre efter installation: https://www.youtube.com/watch?v=6c48LDSrw60
+link til god vid om ting man skal gøre efter installation: https://www.youtube.com/watch?v=6c48LDSrw60
 
- sudo pacman -Syu
- sudo pacman -S gufw
- slå firewall til med default settings
- sudo pacman-mirrors -g
- sudo pacman -S yay
+sudo pacman -Syu
+sudo pacman -S gufw
+slå firewall til med default settings
+sudo pacman-mirrors -g
+sudo pacman -S yay
 
- ## farve til pacman og yay
- `sudo nano /etc/pacman.conf`  
- udkommentér #Color og evt #VerbosePkgLists
+## farve til pacman og yay
+`sudo nano /etc/pacman.conf`  
+udkommentér #Color og evt #VerbosePkgLists
 
- ## packages som skal installeres til nvidia gaming setup
- sudo pacman -S lib32-libldap lib32-nvidia-utils lib32-nvidia-libgl lib32-alsa-lib 
+## packages som skal installeres til nvidia gaming setup
+sudo pacman -S lib32-libldap lib32-nvidia-utils lib32-nvidia-libgl lib32-alsa-lib 
 lib32-alsa-plugins lib32-libpulse lib32-alsa-oss lib32-openal wine winetricks playonlinux
 
 ## kde plasma settings
