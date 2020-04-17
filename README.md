@@ -31,9 +31,12 @@ icons: Breath2 Dark
 cursors: HighContrast
 window decorations: remove left icon and question mark
 wallpaper: #14191d
-widget: digital clock lite
+widget: event calendar plasmoid + spacer uden flexible space
 fonts: Noto Sans
 monospace font: Source Code Pro 10, 14
+
+## ændre settings til ikonstørrelser på default panel
+`code /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray`
 
 ## installation af st
 git clone https://github.com/tobiasstenberg/st
