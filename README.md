@@ -56,10 +56,15 @@ fonts: Noto Sans
 monospace font: Source Code Pro 10, 14
 Remove Launch Feedback from System Settings -> Applications
 
-## Remove titlebar
+## Window Decorations and active window frame
 Go to System Settings > Window Management > Window Rules > New..  
 Under Window class (application) choose Regular Expression from the drop down and enter .* in the input.  
-Click the Appearance & Fixes tab. Enable the No titlebar and frame option. Select Force from the drop down click the Yes radio option.  
+Click the Appearance & Fixes tab. Enable the No titlebar and frame option. Select Force from the drop down click the Yes radio option.
+
+GO to System Settings > Application Style > Window Decorations  
+Install Borderline decorations  
+Configure color by editing decorations.svg in a text editor  
+Configure border sizes and title bar sizes in borderlinerc  
 
 ## Change settings for default icon size in system tray
 `code /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray`
