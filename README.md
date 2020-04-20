@@ -54,6 +54,7 @@ wallpaper: #14191d
 widget: event calendar plasmoid + spacer uden flexible space
 fonts: Noto Sans
 monospace font: Source Code Pro 10, 14
+Remove Launch Feedback from System Settings -> Applications
 
 ## Change settings for default icon size in system tray
 `code /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray`
