@@ -26,6 +26,16 @@ Enable firewall with default settings
 `$ sudo nano /etc/pacman.conf`    
 Uncomment #Color and #VerbosePkgLists
 
+## Configuring git
+Set users name:  
+`$ git config --global user.name <name>`  
+
+Set email:  
+`$ git config --global user.email <email>`  
+
+Enable global credentials to be stored once for every locally cloned repo:  
+`$ git config --global credential.helper store`  
+
 ## Packages and libs to install for nvidia gaming
 sudo pacman -S lib32-libldap lib32-nvidia-utils lib32-nvidia-libgl lib32-alsa-lib 
 lib32-alsa-plugins lib32-libpulse lib32-alsa-oss lib32-openal wine winetricks playonlinux
