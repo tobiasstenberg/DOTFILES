@@ -1,7 +1,7 @@
 # MANJARO KDE PLASMA RICE
 
 ## TO DO
-Configure rofis
+Configure rofi
 Make your own proper solarized theme
 
 ## Custom keybindings
