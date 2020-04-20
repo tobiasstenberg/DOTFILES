@@ -43,3 +43,12 @@ monospace font: Source Code Pro 10, 14
 git clone https://github.com/tobiasstenberg/st
 Icon for ST can be changed in KMenuEdit
 Icon is placed in .icons folder
+
+## Installation of kwin-quarter-tiling
+
+`$ git clone https://github.com/Jazqa/kwin-quarter-tiling`  
+Activate script by executing:  
+`$ kcmshell5 kwinscripts`  
+
+This might be an alternative tiler for KWin:   
+https://github.com/kwin-scripts/kwin-tiling#installation  
