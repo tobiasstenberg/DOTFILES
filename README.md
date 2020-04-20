@@ -5,6 +5,7 @@ Configure rofi
 Make your own proper solarized theme
 
 ## Custom keybindings
+Ctrl+Alt+Return: Launch ST
 Meta+B: Launch Firefox
 Meta+E: Launch Filemanager
 Meta+R: Reset Tiling Layout
