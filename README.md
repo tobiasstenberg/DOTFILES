@@ -1,26 +1,27 @@
 # MANJARO KDE PLASMA RICE
 
-## to do
-konfiguration af rofi
+## TO DO
+Configure rofi
+Make your own proper solarized theme
 
-## tjekliste efter startup
-link til god vid om ting man skal gøre efter installation: https://www.youtube.com/watch?v=6c48LDSrw60
+## Things to do on first boot
+Link to a nice vid on the first steps post-installation: https://www.youtube.com/watch?v=6c48LDSrw60
 
-sudo pacman -Syu
-sudo pacman -S gufw
-slå firewall til med default settings
-sudo pacman-mirrors -g
-sudo pacman -S yay
+`$ sudo pacman -Syu`  
+`$ sudo pacman -S gufw`  
+Enable firewall with default settings  
+`$ sudo pacman-mirrors -g`  
+`$ sudo pacman -S yay`  
 
-## farve til pacman og yay
-`sudo nano /etc/pacman.conf`  
-udkommentér #Color og evt #VerbosePkgLists
+## Color for pacman and AUR helpers
+`$ sudo nano /etc/pacman.conf`    
+Uncomment #Color and #VerbosePkgLists
 
-## packages som skal installeres til nvidia gaming setup
+## Packages and libs to install for nvidia gaming
 sudo pacman -S lib32-libldap lib32-nvidia-utils lib32-nvidia-libgl lib32-alsa-lib 
 lib32-alsa-plugins lib32-libpulse lib32-alsa-oss lib32-openal wine winetricks playonlinux
 
-## kde plasma settings
+## KDE Plasma settings
 global theme: Breath2
 plasma: breath2
 application style: default
@@ -35,12 +36,10 @@ widget: event calendar plasmoid + spacer uden flexible space
 fonts: Noto Sans
 monospace font: Source Code Pro 10, 14
 
-## ændre settings til ikonstørrelser på default panel
+## Change settings for default icon size in system tray
 `code /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray`
 
-## installation af st
+## Installation of the suckless terminal
 git clone https://github.com/tobiasstenberg/st
-husk at få .icons mappen med
-ikon kan ændres ved at tilføje st i kmenuedit
-
-patches til st kan findes her: https://st.suckless.org/patches/
+Icon for ST can be changed in KMenuEdit
+Icon is placed in .icons folder
