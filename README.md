@@ -41,5 +41,6 @@ monospace font: Source Code Pro 10, 14
 ## installation af st
 git clone https://github.com/tobiasstenberg/st
 husk at få .icons mappen med
+ikon kan ændres ved at tilføje st i kmenuedit
 
 patches til st kan findes her: https://st.suckless.org/patches/
