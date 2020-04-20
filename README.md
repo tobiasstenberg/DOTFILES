@@ -4,6 +4,14 @@
 Configure rofi
 Make your own proper solarized theme
 
+## Custom keybindings
+Meta+B: Launch Firefox
+Meta+E: Launch Filemanager
+Meta+R: Reset Tiling Layout
+Meta+Arrow Up: Maximize
+Esc: Close Window
+Alt+Space: Rofi
+
 ## Things to do on first boot
 Link to a nice vid on the first steps post-installation: https://www.youtube.com/watch?v=6c48LDSrw60
 
