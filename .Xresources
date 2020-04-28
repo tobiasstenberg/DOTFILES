@@ -1,0 +1,67 @@
+
+!-------------!
+! ROFI CONFIG !
+!-------------!
+
+! state			background	border		separator
+rofi.color-window:	#ffffff,	#191919,	#191919	
+
+! state			bg		fg		abg		hbg		hfg
+rofi.color-normal:	#ffffff,	#191919,	#ffffff,	#191919,	#ffffff
+
+! general
+rofi.width: 33
+rofi.padding: 30
+rofi.hide-scrollbar: true
+rofi.borderwidth: 0
+rofi.columns: 1
+rofi.lines: 5
+rofi.separator-style: solid
+rofi.font: Inconsolata 12
+
+rofi.color-enabled: true
+!rofi.color-window: #f2a2f0, #f2a2f0, #f2a2f0
+!rofi.color-normal: #f2a2f0, #f2a2f0, #f2a2f0
+
+! ------------------------------------------------------------------------------
+! SOLARIZED DARK
+! ------------------------------------------------------------------------------
+! special
+! special
+*.foreground:   #ebdbb2
+*.background:   #282828
+*.cursorColor:  #add8e6
+
+! .revCursor:   #555555
+
+! black
+*.color0:       #073642
+*.color8:       #002b36
+
+! red
+*.color1:       #dc322f
+*.color9:       #cb4b16
+
+! green
+*.color2:       #859900
+*.color10:      #586e75
+
+! yellow
+*.color3:       #b58900
+*.color11:      #657b83
+
+! blue
+*.color4:       #268bd2
+*.color12:      #839496
+
+! magenta
+*.color5:       #d33682
+*.color13:      #6c71c4
+
+! cyan
+*.color6:       #2aa198
+*.color14:      #93a1a1
+
+! white
+*.color7:       #eee8d5
+*.color15:      #fdf6e3
