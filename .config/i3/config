@@ -129,18 +129,18 @@ bindsym $mod+r mode "resize"
 # rofi
 bindsym $mod+d exec --no-startup-id rofi -show run
 
-# urxvt
+# firefox
+bindsym $mod+e exec --no-startup-id firefox
+
+# thunar
+bindsym $mod+c exec --no-startup-id thunar
+
+# st
 bindsym $mod+Return exec --no-startup-id st
 bindsym $mod+Tab exec --no-startup-id st -name floating
 
-# drawing urxvt
-# bindsym $mod+t exec --no-startup-id ~/Scripts/urdraw.sh
-
 # restart i3 in place
 bindsym $mod+Shift+r restart
-
-# print screen
-# bindsym Print exec --no-startup-id scrot
 
 # lock i3
 # bindsym $mod+e exec --no-startup-id ~/Scripts/lock.sh
