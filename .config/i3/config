@@ -152,8 +152,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # GAPS #
 #------#
 
+gaps top 27
 gaps inner 10
-gaps outer 0
 bindsym $mod+o gaps outer current set 0; gaps inner current set 10
 bindsym $mod+i gaps outer current set 20; gaps inner current set 20
 
@@ -180,10 +180,14 @@ exec_always --no-startup-id xrandr --dpi 192
 
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/14191d.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/292f34.png
 
 exec --no-startup-id dropbox
+
+exec --no-startup-id picom
+
 # exec --no-startup-id compton -cb --config ~/.config/compton/compton.conf
+
 # exec --no-startup-id sudo powertop --auto-tune
 # exec --no-startup-id nm-applet
 # exec --no-startup-id udiskie
