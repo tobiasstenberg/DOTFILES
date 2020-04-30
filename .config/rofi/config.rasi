@@ -1,10 +1,10 @@
 configuration {
-    theme: "breath2dark";
+/*  theme: "breath2dark";*/
 /*	modi: "window,run,ssh";*/
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-font: "Source Code Pro 11";
+/*  font: "Source Code Pro 14";*/
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/

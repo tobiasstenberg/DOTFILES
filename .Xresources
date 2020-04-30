@@ -13,11 +13,11 @@ Xcursor.size: 24
 ! ROFI CONFIG !
 !-------------!
 
-! state			background	border		separator
-rofi.color-window:	#ffffff,	#191919,	#191919	
+! state			    background	border		separator
+rofi.color-window:	#002b36,	#191919,	#268bd2
 
-! state			bg		fg		abg		hbg		hfg
-rofi.color-normal:	#ffffff,	#191919,	#ffffff,	#191919,	#ffffff
+! state			    bg		    fg		    abg		    hbg		    hfg
+rofi.color-normal:	#002b36,	#839496,	#002b36,	#073642,	#268bd2
 
 ! general
 rofi.width: 33
@@ -27,7 +27,7 @@ rofi.borderwidth: 0
 rofi.columns: 1
 rofi.lines: 5
 rofi.separator-style: solid
-rofi.font: Inconsolata 12
+rofi.font: Source Code Pro 16
 
 rofi.color-enabled: true
 !rofi.color-window: #f2a2f0, #f2a2f0, #f2a2f0
