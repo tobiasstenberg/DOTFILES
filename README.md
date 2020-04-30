@@ -1,4 +1,12 @@
-# MANJARO KDE PLASMA RICE
+# RICE
+
+* window manager: i3-gaps
+* terminal: st
+* application launcher: rofi
+* status bar: polybar
+* file manager: thunar
+* compositor: compton
+* notifications: dunst
 
 ## TO DO
 Configure rofi  
