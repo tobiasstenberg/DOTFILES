@@ -63,14 +63,16 @@ line 1 in .profile:
 
 Settings in /etc/X11/xorg.conf.d/30-touchpad.conf to make two-finger click right click + natural scroll:  
 
-Section "InputClass"
-    Identifier "touchpad"
-    Driver "libinput"
-    MatchIsTouchpad "on"
-    Option "Tapping" "on"
-    Option "NaturalScrolling" "true"
-    Option "ClickMethod" "clickfinger"
-EndSection
+Section "InputClass"  
+    Identifier "touchpad"  
+    Driver "libinput"  
+    MatchIsTouchpad "on"  
+    Option "Tapping" "on"  
+    Option "NaturalScrolling" "true"  
+    Option "ClickMethod" "clickfinger"  
+EndSection  
+
+Alternatively .config/touchpadxlibinputrc can be configured
 
 ## First boot
 Link to a nice vid on the first steps post-installation: https://www.youtube.com/watch?v=6c48LDSrw60
