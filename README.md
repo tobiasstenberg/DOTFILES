@@ -2,15 +2,14 @@
 
 * window manager: i3-gaps
 * terminal: st
-* application launcher: rofi
+* compositor: picom
 * status bar: polybar
+* application launcher: rofi
 * file manager: thunar
-* compositor: compton
 * notifications: dunst
 
 ## TO DO
-Configure rofi  
-Configure compton  
+Configure rofi    
 Configure dunst
 Make your own color scheme and integrate with gtk2 and gtk3
 
@@ -49,11 +48,11 @@ Esc: Close Window
 
 ## MacBook Pro specific settings
 
-line 179 in .config/i3/config:  
+#### line 179 in .config/i3/config:  
 
 `exec_always --no-startup-id xrandr --dpi 192`  
 
-line 1-10 in .Xresources:  
+#### line 1-10 in .Xresources:  
 
 ! Fonts {{{  
 Xft.antialias: true  
@@ -66,10 +65,16 @@ Xft.dpi:       192
 ! Cursor  
 Xcursor.size: 24  
 
-line 1 in .profile:  
+#### line 1 in .profile:  
 `export GDK_DPI_SCALE=0.75`  
 
-Settings in /etc/X11/xorg.conf.d/30-touchpad.conf to make two-finger click right click + natural scroll:  
+#### line 213 in .config/picom.conf:  
+
+`backend = "glx";`  
+
+Backend set to glx to get rid of screen tearing, which was very apparent when scrolling in firefox  
+
+#### Settings in /etc/X11/xorg.conf.d/30-touchpad.conf to make two-finger click right click + natural scroll:  
 
 Section "InputClass"  
     Identifier "touchpad"  
