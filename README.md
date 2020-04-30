@@ -1,25 +1,83 @@
 # MANJARO KDE PLASMA RICE
 
 ## TO DO
-Configure rofi
-Make your own proper solarized theme
+Configure rofi  
+Configure compton  
+Configure dunst
+Make your own theme that
 
-## Custom keybindings
-Ctrl+Alt+Return: Launch ST  
-Meta+B: Launch Firefox  
-Meta+E: Launch Filemanager  
-Meta+R: Reset Tiling Layout  
-Meta+Arrow Up: Maximize  
+## Keybindings
+Mod+Return: exec st
+Mod+D: exec rofi  
+Mod+E: exec firefox  
+Mod+C: exec thunar  
+Mod+Shift+R: Reset i3gaps    
 Esc: Close Window  
-Alt+Space: Rofi  
 
-## Things to do on first boot
+## Themes
+
+#### SOLARIZED DARK  
+#073642,  0: black  
+#dc322f,  1: red  
+#859900,  2: green  
+#b58900,  3: yellow  
+#268bd2,  4: blue  
+#d33682,  5: magenta  
+#2aa198,  6: cyan  
+#eee8d5,  7: white  
+#002b36,  8: brblack  
+#cb4b16,  9: brred  
+#586e75,  10: brgreen  
+#657b83,  11: bryellow  
+#839496,  12: brblue  
+#6c71c4,  13: brmagenta  
+#93a1a1,  14: brcyan  
+#fdf6e3,  15: brwhite  
+
+#282828,  258: bg  
+#ebdbb2,  259: fg  
+#add8e6,  256: cursor  
+#555555,  257: rev cursor  
+
+## MacBook Pro specific settings
+
+line 179 in .config/i3/config:  
+
+`exec_always --no-startup-id xrandr --dpi 192`  
+
+line 1-10 in .Xresources:  
+
+! Fonts {{{  
+Xft.antialias: true  
+Xft.hinting:   true  
+Xft.rgba:      rgb  
+Xft.hintstyle: hintfull  
+Xft.dpi:       192  
+! }}}  
+  
+! Cursor  
+Xcursor.size: 24  
+
+line 1 in .profile:  
+`export GDK_DPI_SCALE=0.75`  
+
+Settings in /etc/X11/xorg.conf.d/30-touchpad.conf to make two-finger click right click + natural scroll:  
+
+Section "InputClass"
+    Identifier "touchpad"
+    Driver "libinput"
+    MatchIsTouchpad "on"
+    Option "Tapping" "on"
+    Option "NaturalScrolling" "true"
+    Option "ClickMethod" "clickfinger"
+EndSection
+
+## First boot
 Link to a nice vid on the first steps post-installation: https://www.youtube.com/watch?v=6c48LDSrw60
 
 `$ sudo pacman -Syu`  
 `$ sudo pacman -S gufw`  
-Enable firewall with default settings  
-`$ sudo pacman-mirrors -g`  
+`$ sudo pacman-mirrors -g`    
 `$ sudo pacman -S yay`  
 
 ## Color for pacman and AUR helpers
@@ -40,7 +98,7 @@ Enable global credentials to be stored once for every locally cloned repo:
 sudo pacman -S lib32-libldap lib32-nvidia-utils lib32-nvidia-libgl lib32-alsa-lib 
 lib32-alsa-plugins lib32-libpulse lib32-alsa-oss lib32-openal wine winetricks playonlinux
 
-## KDE Plasma settings
+## KDE Plasma GTK settings
 global theme: Breath2
 plasma: breath2
 application style: default
@@ -82,26 +140,3 @@ Activate script by executing:
 This might be an alternative tiler for KWin:   
 https://github.com/kwin-scripts/kwin-tiling#installation  
 
-
-## SOLARIZED DARK  
-#073642,  0: black  
-#dc322f,  1: red  
-#859900,  2: green  
-#b58900,  3: yellow  
-#268bd2,  4: blue  
-#d33682,  5: magenta  
-#2aa198,  6: cyan  
-#eee8d5,  7: white  
-#002b36,  8: brblack  
-#cb4b16,  9: brred  
-#586e75,  10: brgreen  
-#657b83,  11: bryellow  
-#839496,  12: brblue  
-#6c71c4,  13: brmagenta  
-#93a1a1,  14: brcyan  
-#fdf6e3,  15: brwhite  
-
-#282828,  258: bg  
-#ebdbb2,  259: fg  
-#add8e6,  256: cursor  
-#555555,  257: rev cursor  
