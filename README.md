@@ -4,7 +4,7 @@
 Configure rofi  
 Configure compton  
 Configure dunst
-Make your own theme that
+Make your own color scheme and integrate with gtk2 and gtk3
 
 ## Keybindings
 Mod+Return: exec st
