@@ -1,23 +1,130 @@
-! Fonts {{{
+Xft.dpi:       192
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
 Xft.hintstyle: hintfull
-Xft.dpi:       192
-! }}}
 
 ! Cursor
 Xcursor.size: 24
+
+! ------------------------------------------------------------------------------
+! SOLARIZED DARK
+! ------------------------------------------------------------------------------
+
+! black
+#define solar0 #073642
+#define solar8 #002b36
+
+! red
+#define solar1 #dc322f
+#define solar9 #cb4b16
+
+! green
+#define solar2 #859900
+#define solar10 #586e75
+
+! yellow
+#define solar3 #b58900
+#define solar11 #657b83
+
+! blue
+#define solar4 #268bd2
+#define solar12 #839496
+
+! magenta
+#define solar5 #d33682
+#define solar13 #6c71c4
+
+! cyan
+#define solar6 #2aa198
+#define solar14 #93a1a1
+
+! white
+#define solar7 #eee8d5
+#define solar15 #fdf6e3
+
+! special
+! special
+*.foreground:   #ebdbb2
+*.background:   #282828
+*.cursorColor:  #add8e6
+ .revCursor:   #555555
+
+*.color0: solar0
+*.color8: solar8
+
+*.color1: solar1
+*.color9: solar9
+
+*.color2: solar2
+*.color10: solar10
+
+*.color3: solar3
+*.color11: solar11
+
+*.color4: solar4
+*.color12: solar12
+
+*.color5: solar5
+*.color13: solar13
+
+*.color6: solar6
+*.color14: solar14
+
+*.color7: solar7
+*.color15: solar15
+
+! ------------------------------------------------------------------------------
+! NORD
+! ------------------------------------------------------------------------------
+
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
+!*.foreground:   nord4
+!*.background:   nord0
+!*.cursorColor:  nord4
+
+!*.color0: nord1
+!*.color1: nord11
+!*.color2: nord14
+!*.color3: nord13
+!*.color4: nord9
+!*.color5: nord15
+!*.color6: nord8
+!*.color7: nord5
+!*.color8: nord3
+!*.color9: nord11
+!*.color10: nord14
+!*.color11: nord13
+!*.color12: nord9
+!*.color13: nord15
+!*.color14: nord7
+!*.color15: nord6
 
 !-------------!
 ! ROFI CONFIG !
 !-------------!
 
 ! state			    background	border		separator
-rofi.color-window:	#002b36,	#191919,	#268bd2
+rofi.color-window:	nord1,	    #191919,	nord10
 
 ! state			    bg		    fg		    abg		    hbg		    hfg
-rofi.color-normal:	#002b36,	#839496,	#002b36,	#073642,	#268bd2
+rofi.color-normal:	nord1,	    #839496,	nord1,	    nord0,	    nord11
 
 ! general
 rofi.width: 33
@@ -27,51 +134,10 @@ rofi.borderwidth: 0
 rofi.columns: 1
 rofi.lines: 5
 rofi.separator-style: solid
-rofi.font: Source Code Pro 16
+rofi.font: Source Code Pro 8
+rofi.terminal: st
+rofi.dpi: 192
 
 rofi.color-enabled: true
 !rofi.color-window: #f2a2f0, #f2a2f0, #f2a2f0
 !rofi.color-normal: #f2a2f0, #f2a2f0, #f2a2f0
-
-! ------------------------------------------------------------------------------
-! SOLARIZED DARK
-! ------------------------------------------------------------------------------
-! special
-! special
-*.foreground:   #ebdbb2
-*.background:   #282828
-*.cursorColor:  #add8e6
-
-! .revCursor:   #555555
-
-! black
-*.color0:       #073642
-*.color8:       #002b36
-
-! red
-*.color1:       #dc322f
-*.color9:       #cb4b16
-
-! green
-*.color2:       #859900
-*.color10:      #586e75
-
-! yellow
-*.color3:       #b58900
-*.color11:      #657b83
-
-! blue
-*.color4:       #268bd2
-*.color12:      #839496
-
-! magenta
-*.color5:       #d33682
-*.color13:      #6c71c4
-
-! cyan
-*.color6:       #2aa198
-*.color14:      #93a1a1
-
-! white
-*.color7:       #eee8d5
-*.color15:      #fdf6e3

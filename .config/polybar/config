@@ -21,31 +21,47 @@
 ;--------;
 
 [colors]
-background = ${xrdb:color8}
-;background = #14191d
-background-alt = #444
-;foreground = ${xrdb:color14}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+
+nord0 = #2E3440
+nord1 = #3B4252
+nord2 = #434C5E
+nord3 = #4C566A
+nord3.25 = #546076
+nord3.5 = #5C6A82
+
+nord4 = #D8DEE9
+nord5 = #E5E9F0
+nord6 = #ECEFF4
+
+nord7 = #8FBCBB
+nord8 = #88C0D0
+nord9 = #81A1C1
+nord10 = #5E81AC
+
+nord11 = #BF616A
+nord12 = #D08770
+nord13 = #EBCB8B
+nord14 = #A3BE8C
+nord15 = #B48EAD
 
 ;------------;
 ; DIMENSIONS ;
 ;------------;
 
 [bar/top]
+
+monitor = eDP1
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 2840
+dpi = 192
+;width = 2840
 height = 35
 offset-x = 20
 offset-y = 20
 radius = 0.0
 fixed-center = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = #00000000
+foreground = ${colors.nord6}
 
 ;---------------;
 ; MISCELLANEOUS ;
@@ -54,15 +70,6 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-;border-top-size = 2
-;border-bottom-size = 0
-;border-right-size = 15
-;border-left-size = 15
-;border-color = #292f34
-padding-left = 2
-padding-right = 2
-module-margin = 1.5
-
 tray-position = none
 tray-detached = true
 
@@ -70,15 +77,11 @@ tray-detached = true
 ; FONTS ;
 ;-------;
 
-;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
-
-font-0 = Noto Sans:pixelsize=14;1
-font-1 = Unifont:fontformat=truetype:size=14:antialias=false;0
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=14;1"
-font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=14;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=14;1"
+font-0 = Noto Sans:pixelsize=7;1
+font-1 = Unifont:fontformat=truetype:size=7:antialias=false;0
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;1"
+font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;1"
+font-4 = "Font Awesome 5 Brands:pixelsize=7;1"
 
 modules-left = battery backlight volume
 modules-center = i3
@@ -104,9 +107,76 @@ cursor-scroll = ns-resize
 ; MODULES ;
 ;---------;
 
+;----------------------------------------------------------
+
+[paddings]
+inner = 2.5
+outer = 5
+
+;----------------------------------------------------------
+
+[module/left]
+type = custom/text
+content = "%{T3}%{T-}"
+
+[module/right1]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.nord0}
+content-foreground = ${colors.nord10}
+
+[module/right2]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.nord1}
+content-foreground = ${colors.nord0}
+
+[module/right3]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.nord2}
+content-foreground = ${colors.nord1}
+
+[module/right4]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.nord3}
+content-foreground = ${colors.nord2}
+
+[module/right5]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.nord3.25}
+content-foreground = ${colors.nord3}
+
+[module/right6]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.nord3.5}
+content-foreground = ${colors.nord3.25}
+
+[module/right7]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground = ${colors.nord3.5}
+
+[module/padding6]
+type = custom/text
+content = "%{B#546076}%{F}    %{B- F-}"
+content-foreground = ${colors.nord3.25}
+
+[module/padding7]
+type = custom/text
+content = "%{B#5C6A82}%{F}  %{B- F-}"
+content-foreground = ${colors.nord3.5}
+
+;----------------------------------------------------------
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+
+;----------------------------------------------------------
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -124,6 +194,8 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
+;----------------------------------------------------------
+
 [module/filesystem]
 format-margin-top = 2
 type = internal/fs
@@ -131,32 +203,16 @@ interval = 25
 
 mount-0 = /
 
-;label-mounted = %{F#FFFFFF}%mountpoint%%{F-}: %percentage_used%%
-label-mounted = %{F${colors.foreground}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F${foreground}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground}
 
-[module/bspwm]
-type = internal/bspwm
+label-mounted-padding = ${paddings.inner}
+label-unmounted-padding = ${paddings.inner}
 
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-mounted-background = ${colors.nord3.25}
+label-unmounted-background = ${colors.nord3.25}
 
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
+;----------------------------------------------------------
 
 [module/i3]
 type = internal/i3
@@ -169,11 +225,12 @@ wrapping-scroll = false
 
 label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.nord1}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.nord3}
+label-focused-foreground = #D8DEE9
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -187,11 +244,13 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.alert}
+label-urgent-background = ${colors.nord15}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
+
+;----------------------------------------------------------
 
 [module/mpd]
 type = internal/mpd
@@ -223,18 +282,34 @@ bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
+;----------------------------------------------------------
+
 [module/backlight-acpi]
 inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
 
+;----------------------------------------------------------
+
 [module/cpu]
 type = internal/cpu
 label =  %percentage%%
 
+label-padding = ${paddings.inner}
+
+label-background = ${colors.nord2}
+
+;----------------------------------------------------------
+
 [module/memory]
 type = internal/memory
 label =  %gb_used%
+
+label-padding = ${paddings.inner}
+
+label-background = ${colors.nord3}
+
+;----------------------------------------------------------
 
 [module/wlan]
 type = internal/network
@@ -244,10 +319,24 @@ interval = 5
 label-connected =  %essid%
 label-disconnected =  Not Connected
 
+label-connected-padding = ${paddings.inner}
+label-disconnected-padding = ${paddings.inner}
+
+label-connected-background = ${colors.nord1}
+label-disconnected-background = ${colors.nord1}
+
+;----------------------------------------------------------
+
 [module/network]
 type = internal/network
 interface = wlp2s0
 label-connected =  %downspeed% |  %upspeed%
+
+label-connected-padding = ${paddings.inner}
+
+label-connected-background = ${colors.nord1}
+
+;----------------------------------------------------------
 
 [module/eth]
 type = internal/network
@@ -265,11 +354,17 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
+;----------------------------------------------------------
+
 [module/time]
 type = internal/date
 interval = 1.0
 ;date =  %H:%M
 date = %H:%M
+label-padding = ${paddings.inner}
+format-background = ${colors.nord3.5}
+
+;----------------------------------------------------------
 
 [module/date]
 type = internal/date
@@ -286,15 +381,29 @@ format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
 
+;----------------------------------------------------------
+
 [module/volume]
 type = internal/volume
 
 format-volume = <ramp-volume> <label-volume>
 format-muted =  0%
 
+format-volume-padding = ${paddings.inner}
+format-muted-padding-left = ${paddings.inner}
+
+format-volume-background = ${colors.nord1}
+format-muted-background = ${colors.nord1}
+
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+
+;ramp-volume-0-padding-left = ${paddings.inner}
+;ramp-volume-1-padding-left = ${paddings.inner}
+;ramp-volume-2-padding-left = ${paddings.inner}
+
+;----------------------------------------------------------
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -305,6 +414,8 @@ label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
 label-muted-foreground = #666
+
+label-volume-padding = ${paddings.inner}
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -322,6 +433,8 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+;----------------------------------------------------------
 
 [module/alsa]
 type = internal/alsa
@@ -351,28 +464,49 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
+;----------------------------------------------------------
+
 [module/battery]
 type = internal/battery
-
 ; battery = BAT1
-
 poll-interval = 1
-
 full-at = 95
 
 label-discharging = %percentage%%
 label-charging = %percentage%%
 label-full = %percentage%%
 
+label-discharging-padding-right = ${paddings.inner}
+label-charging-padding-right = ${paddings.inner}
+label-full-padding-right = ${paddings.inner}
+
+label-discharging-background = ${colors.nord3}
+label-charging-background = ${colors.nord3}
+label-full-background = ${colors.nord3}
+
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
-format-charging =  <label-charging>
+format-charging = <ramp-capacity> <label-charging>
+
+;format-charging-padding = ${paddings.inner}
+
+format-discharging-background = ${colors.nord3}
+format-charging-background = ${colors.nord3}
+format-full-background = ${colors.nord3}
+
+ramp-capacity-0-padding-left = ${paddings.inner}
+ramp-capacity-1-padding-left = ${paddings.inner}
+ramp-capacity-2-padding-left = ${paddings.inner}
+ramp-capacity-3-padding-left = ${paddings.inner}
+ramp-capacity-4-padding-left = ${paddings.inner}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
+
+;----------------------------------------------------------
 
 [module/backlight]
 type = internal/xbacklight
@@ -385,32 +519,50 @@ format = <ramp> <label>
 
 label = %percentage%%
 
+label-padding-right = ${paddings.inner}
+
+label-background = ${colors.nord2}
+format-background = ${colors.nord2}
+
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
+
+ramp-0-padding-left = ${paddings.inner}
+ramp-1-padding-left = ${paddings.inner}
+ramp-2-padding-left = ${paddings.inner}
+
+;----------------------------------------------------------
 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
+label-padding-right = ${paddings.inner}
+label-background = ${colors.nord2}
+format-background = ${colors.nord2}
+
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.nord15}
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = ${colors.foreground}
+
+ramp-0-padding-left = ${paddings.inner}
+ramp-1-padding-left = ${paddings.inner}
+ramp-2-padding-left = ${paddings.inner}
+
+;----------------------------------------------------------
 
 [module/powermenu]
 type = custom/menu
-
 expand-right = true
-
 format-spacing = 1
 
 label-open = 
@@ -435,6 +587,8 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
+;----------------------------------------------------------
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -443,8 +597,9 @@ screenchange-reload = true
 ;compositing-border = over
 ;pseudo-transparency = false
 
+;----------------------------------------------------------
+
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-; vim:ft=dosini
+;vim:ft=dosini

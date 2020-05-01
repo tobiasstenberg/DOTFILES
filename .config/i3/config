@@ -180,7 +180,7 @@ exec_always --no-startup-id xrandr --dpi 192
 
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/292f34.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/nord1.png
 
 exec --no-startup-id dropbox
 
