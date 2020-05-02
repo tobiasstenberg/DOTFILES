@@ -45,32 +45,25 @@ Xcursor.size: 24
 
 ! special
 ! special
-*.foreground:   #ebdbb2
 *.background:   #282828
+*.foreground:   #ebdbb2
 *.cursorColor:  #add8e6
- .revCursor:   #555555
+ .revCursor:    #555555
 
 *.color0: solar0
 *.color8: solar8
-
 *.color1: solar1
 *.color9: solar9
-
 *.color2: solar2
 *.color10: solar10
-
 *.color3: solar3
 *.color11: solar11
-
 *.color4: solar4
 *.color12: solar12
-
 *.color5: solar5
 *.color13: solar13
-
 *.color6: solar6
 *.color14: solar14
-
 *.color7: solar7
 *.color15: solar15
 
@@ -121,23 +114,23 @@ Xcursor.size: 24
 !-------------!
 
 ! state			    background	border		separator
-rofi.color-window:	nord1,	    #191919,	nord10
+!rofi.color-window:	nord1,	    #191919,	nord11
 
 ! state			    bg		    fg		    abg		    hbg		    hfg
-rofi.color-normal:	nord1,	    #839496,	nord1,	    nord0,	    nord11
+!rofi.color-normal:	nord1,	    #839496,	nord1,	    nord0,	    nord11
 
 ! general
-rofi.width: 33
-rofi.padding: 30
-rofi.hide-scrollbar: true
-rofi.borderwidth: 0
-rofi.columns: 1
-rofi.lines: 5
-rofi.separator-style: solid
-rofi.font: Source Code Pro 8
-rofi.terminal: st
-rofi.dpi: 192
+!rofi.width: 33
+!rofi.padding: 30
+!rofi.hide-scrollbar: true
+!rofi.borderwidth: 0
+!rofi.columns: 1
+!rofi.lines: 5
+!rofi.separator-style: solid
+!rofi.font: Source Code Pro 8
+!rofi.terminal: st
+!rofi.dpi: 192
 
-rofi.color-enabled: true
+!rofi.color-enabled: true
 !rofi.color-window: #f2a2f0, #f2a2f0, #f2a2f0
 !rofi.color-normal: #f2a2f0, #f2a2f0, #f2a2f0

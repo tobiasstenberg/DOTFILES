@@ -59,6 +59,7 @@ offset-x = 20
 offset-y = 20
 radius = 0.0
 fixed-center = true
+module-margin-top = 20.0
 
 background = #00000000
 foreground = ${colors.nord6}

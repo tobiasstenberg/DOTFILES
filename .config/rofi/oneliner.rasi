@@ -1,0 +1,51 @@
+
+@import "globals.rasi"
+
+* {
+    background-color:       #2E3440;
+    border-color:           #ECEFF4;
+    text-color:             #ECEFF4;
+    font:                   "Noto Sans 7";
+}
+
+#window {
+    anchor:                 north;
+    location:               north;
+    width:                  1142;
+    height:                 35;
+    children:               [ horibox ];
+    padding:                0;
+}
+
+#prompt {
+    background-color:       #434C5E;
+    padding:                2px 20px;
+} 
+
+#horibox {
+    orientation:            horizontal;
+    children:               [ prompt, entry, listview ];
+    padding:                0;
+}
+
+#listview {
+    layout:                 horizontal;
+    lines:                  5;
+    spacing:                0;
+    padding:                0;
+}
+
+#entry {
+    background-color:       #3B4252;
+    expand:                 false;
+    width:                  10em;
+    padding:                2px 20px;
+}
+
+#element {
+    padding:                2 20 8;
+    text-color:             #D8DEE9;
+}
+#element.selected {
+    background-color:       #076678;
+}
