@@ -53,7 +53,7 @@ nord15 = #B48EAD
 monitor = eDP1
 ;monitor = ${env:MONITOR:HDMI-1}
 dpi = 192
-;width = 2840
+width = 2840
 height = 35
 offset-x = 20
 offset-y = 20
@@ -83,8 +83,7 @@ font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;1"
 font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=7;1"
 
-modules-left = battery backlight volume
-modules-center = i3
+modules-left = battery backlight volume invisiblepadding i3 xwindow
 modules-right = wlan network cpu temperature memory filesystem time
 
 ;tray-background = #0063ff
@@ -110,10 +109,16 @@ cursor-scroll = ns-resize
 ;----------------------------------------------------------
 
 [paddings]
-inner = 2.5
+inner = 4.0
 outer = 5
 
 ;----------------------------------------------------------
+
+[module/invisiblepadding]
+type = custom/text
+content = "%{T3}        %{T-}"
+content-background = #00000000
+content-foreground = #000000
 
 [module/left]
 type = custom/text
@@ -175,6 +180,8 @@ content-foreground = ${colors.nord3.5}
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+label-padding = ${paddings.inner}
+label-background = ${colors.nord1}
 
 ;----------------------------------------------------------
 
@@ -229,7 +236,7 @@ label-mode-background = ${colors.nord1}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.nord3}
+label-focused-background = ${colors.nord2}
 label-focused-foreground = #D8DEE9
 label-focused-padding = 2
 

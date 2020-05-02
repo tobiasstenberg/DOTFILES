@@ -180,7 +180,7 @@ exec_always --no-startup-id xrandr --dpi 192
 
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/nord1.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/nord0.png
 
 exec --no-startup-id dropbox
 
@@ -235,7 +235,7 @@ floating_minimum_size -1 x -1
 # BAR #
 #-----#
 
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/scripts/launch_polybar.sh
 
 #########################################################################################################################################
 #|||	ASSIGNMENTS
