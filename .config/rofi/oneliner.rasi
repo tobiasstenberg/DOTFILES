@@ -4,7 +4,7 @@
 * {
     background-color:       #2E3440;
     border-color:           #ECEFF4;
-    text-color:             #ECEFF4;
+    text-color:             #93a1a1;
     font:                   "Noto Sans 7";
 }
 
@@ -44,8 +44,8 @@
 
 #element {
     padding:                2 20 8;
-    text-color:             #D8DEE9;
 }
 #element.selected {
-    background-color:       #076678;
+    background-color:       #8FBCBB;
+    text-color:             #2E3440;
 }

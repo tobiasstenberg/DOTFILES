@@ -62,7 +62,8 @@ fixed-center = true
 module-margin-top = 20.0
 
 background = #00000000
-foreground = ${colors.nord6}
+;foreground = ${colors.nord3.5}
+foreground = #93a1a1
 
 ;---------------;
 ; MISCELLANEOUS ;
@@ -238,7 +239,7 @@ label-mode-background = ${colors.nord1}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.nord2}
-label-focused-foreground = #D8DEE9
+label-focused-foreground = #93a1a1
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor

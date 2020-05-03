@@ -143,7 +143,7 @@ bindsym $mod+Tab exec --no-startup-id st -name floating
 bindsym $mod+Shift+r restart
 
 # lock i3
-# bindsym $mod+e exec --no-startup-id ~/Scripts/lock.sh
+# bindsym $mod+e exec --no-startup-id ~/scripts/lock
 
 # exit i3
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -180,7 +180,7 @@ exec_always --no-startup-id xrandr --dpi 192
 
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/nord0.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/14191d.png
 
 exec --no-startup-id dropbox
 
@@ -235,15 +235,16 @@ floating_minimum_size -1 x -1
 # BAR #
 #-----#
 
-exec_always --no-startup-id ~/scripts/launch_polybar.sh
+exec_always --no-startup-id ~/scripts/launch_polybar
 
 #########################################################################################################################################
 #|||	ASSIGNMENTS
 #########################################################################################################################################
+
 assign [class="Firefox"] $ws2
-# assign [class="Chromium"] $ws2
-# assign [class="Gedit"] $ws3
-# assign [class="Code"] $ws3
+#assign [class="Chromium"] $ws2
+#assign [class="Gedit"] $ws3
+#assign [class="Code"] $ws3
 #assign [class="Nautilus"] $ws4
 #assign [class="qutebrowser"] $ws2
 assign [class="vlc"] $ws6

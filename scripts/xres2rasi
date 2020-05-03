@@ -1,6 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# IMPORTANT: this script is currently broken if you try to do the following since the wildcard method used here will get both color1 and color10 at the same time
+# IMPORTANT: this script is currently broken if you try to do the following since 
+# the wildcard method used here will get both color1 and color10 at the same time
 
 rasi_file="$HOME/.config/rofi/globals.rasi"
 

@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+source .profile
+
 shopt -s autocd # allows cd into directory whitout typing cd
 
 [[ $- != *i* ]] && return
@@ -74,7 +76,7 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
-		PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\[\033[00m\] '
+		PS1='\[\033[01;38m\][\u@\h\[\033[01;38m\] \W\[\033[01;38m\]]\$\[\033[00m\] '
 	fi
 
 else
@@ -136,3 +138,6 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+PATH="$HOME/scripts:$PATH"
+export PATH

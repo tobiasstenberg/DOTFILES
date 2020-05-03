@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Terminate already running bar instances
 killall -q polybar
@@ -6,8 +6,7 @@ killall -q polybar
 # polybar-msg cmd quit
 
 # Launch bar(s)
-echo "---" | tee -a /tmp/polybar_top.log
+echo "---" | tee -a /tmclearp/polybar_top.log
 polybar top >>/tmp/polybar_top.log 2>&1 &
-
 
 echo "Bars launched..."
