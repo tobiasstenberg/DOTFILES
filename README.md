@@ -6,12 +6,17 @@
 * status bar: polybar
 * application launcher: rofi
 * file manager: thunar
-* notifications: dunst
+* notification daemon: dunst + dunstify
 
 ## TO DO
 Make a resources and links section  
-Configure rofi    
-Configure dunst
+Make a custom rofi menu to show i3 keybindings  
+Configure appearance of dunst and dunstify  
+
+Add following features to dunst:  
+* volume indicator
+* brightness indicator
+* use dunst as general notification for when a long script has finished - a scraper for example
 
 ## Keybindings
 Mod+Return: exec st
@@ -19,7 +24,7 @@ Mod+D: exec rofi
 Mod+E: exec firefox  
 Mod+C: exec thunar  
 Mod+Shift+R: Reset i3gaps    
-Esc: Close Window  
+Mod+Q: Close Window  
 
 ## Themes
 
