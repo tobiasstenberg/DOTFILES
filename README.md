@@ -18,6 +18,11 @@ Add following features to dunst:
 * brightness indicator
 * use dunst as general notification for when a long script has finished - a scraper for example
 
+Add following features to polybar:  
+* Pacman and AUR updates counter
+* Number of unread emails and clickable exec to thunderbird
+* Github notification counter and clickable link
+
 ## Keybindings
 Mod+Return: exec st
 Mod+D: exec rofi  
