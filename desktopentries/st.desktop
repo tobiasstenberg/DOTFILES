@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=st
+Exec=st
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=System

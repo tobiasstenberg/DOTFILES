@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Autoscriptmenu
+Exec=autoscriptmenu
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Script;

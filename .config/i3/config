@@ -127,7 +127,7 @@ bindsym $mod+r mode "resize"
 #----------------#
 
 # rofi
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme oneliner
 
 # firefox
 bindsym $mod+e exec --no-startup-id firefox
