@@ -1,0 +1,11 @@
+#!/bin/bash
+
+targetImage="${1##*/}"
+
+for i in *.{jpg,JPG,png}; do
+    echo "$i"
+    [[ "$i" = "$targetImage" ]] && continue
+    images+=("$i")
+done
+
+sxiv "$targetImage" "${images[@]}" &
