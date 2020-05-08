@@ -5,6 +5,11 @@ rofi
 st
 picom
 sxiv
+dunst
+dunstify
+arandr
+ffmpeg
+youtube-dl
 newsboat
 htop
 neofetch
