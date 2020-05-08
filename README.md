@@ -9,7 +9,10 @@
 * notification daemon: dunst + dunstify
 
 ## TO DO
-Make a resources and links section  
+Configure a lock screen - possibly a custom bash script  
+Find a more suitable way of loading different files for Xresources  
+Find a way to merge Xresources into polybar with xrdb  
+Scale down the interfaces of GTK applications like GIMP and Inkscape  
 Make a custom rofi menu to show i3 keybindings  
 Configure appearance of dunst and dunstify  
 
@@ -24,12 +27,12 @@ Add following features to polybar:
 * Github notification counter and clickable link
 
 ## Keybindings
-Mod+Return: exec st
-Mod+D: exec rofi  
-Mod+E: exec firefox  
-Mod+C: exec thunar  
-Mod+Shift+R: Reset i3gaps    
-Mod+Q: Close Window  
+Mod+Return:     st
+Mod+D:          rofi  
+Mod+E:          firefox  
+Mod+C:          thunar  
+Mod+Shift+R:    reset i3gaps    
+Mod+Q:          kill window  
 
 ## Themes
 
@@ -105,6 +108,11 @@ Link to a nice vid on the first steps post-installation: https://www.youtube.com
 `$ sudo pacman-mirrors -g`    
 `$ sudo pacman -S yay`  
 
+## Installation of the suckless terminal
+git clone https://github.com/tobiasstenberg/st
+Icon for ST can be changed in KMenuEdit
+Icon is placed in .icons folder
+
 ## Color for pacman and AUR helpers
 `$ sudo nano /etc/pacman.conf`    
 Uncomment #Color and #VerbosePkgLists
@@ -123,7 +131,9 @@ Enable global credentials to be stored once for every locally cloned repo:
 sudo pacman -S lib32-libldap lib32-nvidia-utils lib32-nvidia-libgl lib32-alsa-lib 
 lib32-alsa-plugins lib32-libpulse lib32-alsa-oss lib32-openal wine winetricks playonlinux
 
-## KDE Plasma GTK settings
+# KDE Plasma settings
+
+## Overall settings
 global theme: Breath2
 plasma: breath2
 application style: default
@@ -150,11 +160,6 @@ Click the Appearance & Fixes tab. Enable the No titlebar and frame option. Selec
 
 ## Change settings for default icon size in system tray
 `code /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray`
-
-## Installation of the suckless terminal
-git clone https://github.com/tobiasstenberg/st
-Icon for ST can be changed in KMenuEdit
-Icon is placed in .icons folder
 
 ## Installation of kwin-quarter-tiling
 
