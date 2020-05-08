@@ -5,7 +5,8 @@ Xft.rgba:      rgb
 Xft.hintstyle: hintfull
 
 ! Cursor
-Xcursor.size: 24
+Xcursor.theme: Adwaita
+Xcursor.size: 32
 
 ! ------------------------------------------------------------------------------
 ! SOLARIZED DARK
@@ -45,8 +46,9 @@ Xcursor.size: 24
 
 ! special
 ! special
-*.background:   #282828
-*.foreground:   #ebdbb2
+!*.background:   #282828
+*.background:    #3B4252
+*.foreground:   #93a1a1
 *.cursorColor:  #add8e6
  .revCursor:    #555555
 

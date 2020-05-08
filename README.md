@@ -10,9 +10,9 @@
 
 ## TO DO
 Configure a lock screen - possibly a custom bash script  
-Find a more suitable way of loading different files for Xresources  
 Find a way to merge Xresources into polybar with xrdb  
 Scale down the interfaces of GTK applications like GIMP and Inkscape  
+Find a more suitable way of loading different files for Xresources      
 Make a custom rofi menu to show i3 keybindings  
 Configure appearance of dunst and dunstify  
 
@@ -65,7 +65,7 @@ Mod+Q:          kill window
 
 `exec_always --no-startup-id xrandr --dpi 192`  
 
-#### line 1-10 in .Xresources:  
+#### line 1-11 in .Xresources:  
 
 ! Fonts {{{  
 Xft.antialias: true  
