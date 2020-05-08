@@ -1,6 +1,13 @@
+i3gaps
+i3lock-color
+polybar
+rofi
+st
+picom
+sxiv
+newsboat
 htop
 neofetch
-hardinfo
 etcher
 redshift
 psensor
@@ -10,11 +17,7 @@ playonlinux
 wine
 winetricks
 blender
-inkscape
 GIMP
+inkscape
 audacity
 OBS studio
-polybar
-rofi
-st
-newsboat

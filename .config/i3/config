@@ -56,16 +56,16 @@ bindsym $mod+b floating toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:  "
-set $ws2 "2:  "
-set $ws3 "3:  "
-set $ws4 "4:  "
-set $ws5 "5:  "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10:  "
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -91,11 +91,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
@@ -120,8 +117,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
-
 #----------------#
 # BASIC BINDINGS #
 #----------------#
@@ -143,7 +138,7 @@ bindsym $mod+Tab exec --no-startup-id st -name floating
 bindsym $mod+Shift+r restart
 
 # lock i3
-# bindsym $mod+e exec --no-startup-id ~/scripts/lock
+bindsym $mod+m exec --no-startup-id ~/scripts/lock
 
 # exit i3
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -154,8 +149,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 gaps top 27
 gaps inner 10
-bindsym $mod+o gaps outer current set 0; gaps inner current set 10
-bindsym $mod+i gaps outer current set 20; gaps inner current set 20
+bindsym $mod+o gaps inner current set 0; gaps inner current set 10
+bindsym $mod+i gaps inner current set 10; gaps inner current set 20
 
 #------------#
 # APPEARANCE #
@@ -178,46 +173,32 @@ client.background 		#
 
 exec_always --no-startup-id xrandr --dpi 192
 
+exec_always --no-startup-id xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 32
+
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/14191d.png
+exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/nord0.png
 
-exec --no-startup-id dropbox
+exec_always --no-startup-id ~/scripts/launch_polybar
 
 exec --no-startup-id picom
 
-# exec --no-startup-id compton -cb --config ~/.config/compton/compton.conf
+# exec --no-startup-id dropbox
 
 # exec --no-startup-id sudo powertop --auto-tune
-# exec --no-startup-id nm-applet
-# exec --no-startup-id udiskie
 
 #---------------#
 # SPECIAL CASES #
 #---------------#
 
-
 # thunar
-for_window [class="Thunar"] floating enable
-for_window [class="Thunar"] resize set 1500 1000
-for_window [class="Thunar"] move absolute position center
+# for_window [class="Thunar"] floating enable
+# for_window [class="Thunar"] resize set 1500 1000
+# for_window [class="Thunar"] move absolute position center
 
-# feh
-for_window [class="feh"] floating enable
-for_window [class="feh"] move absolute position center
-
-# dropdown terminal
-for_window [instance="floating"] floating enable
-#for_window [instance="floating"] resize set 600 450
-#for_window [instance="floating"] move absolute position center
-
-# libreoffice
-# for_window [class="Soffice"] resize set 1000 750
-# for_window [class="Soffice"] move absolute position center
-
-#------------#
-# MEDIA KEYS #
-#------------#
+#---------------#
+# FUNCTION KEYS #
+#---------------#
 
 # audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
@@ -228,26 +209,20 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
-floating_maximum_size 1500 x 1000
+floating_maximum_size 1920 x 1080
 floating_minimum_size -1 x -1
-
-#-----#
-# BAR #
-#-----#
-
-exec_always --no-startup-id ~/scripts/launch_polybar
 
 #########################################################################################################################################
 #|||	ASSIGNMENTS
 #########################################################################################################################################
 
-assign [class="Firefox"] $ws2
+#assign [class="Firefox"] $ws2
 #assign [class="Chromium"] $ws2
 #assign [class="Gedit"] $ws3
 #assign [class="Code"] $ws3
 #assign [class="Nautilus"] $ws4
 #assign [class="qutebrowser"] $ws2
-assign [class="vlc"] $ws6
+#assign [class="vlc"] $ws6
 #assign [class="rviz"] $workspace3
 #assign [class="rtabmapviz"] $workspace3
 #assign [class="QGroundControl"] $workspace3

@@ -9,7 +9,6 @@
 * notification daemon: dunst + dunstify
 
 ## TO DO
-Configure a lock screen - possibly a custom bash script  
 Find a way to merge Xresources into polybar with xrdb  
 Scale down the interfaces of GTK applications like GIMP and Inkscape  
 Find a more suitable way of loading different files for Xresources      
