@@ -1,0 +1,17 @@
+.tab-background[selected="true"] {
+	background-attachment: none!important;
+	background-color: #2E3440!important;
+	background-image: none!important;
+	background-position: none!important;
+	background-repeat: none!important;
+	background-size: none!important;
+}
+
+toolbar, nav-bar > * {
+  background-attachment: none!important;
+  background-color: #2E3440!important;
+  background-image: none!important;
+	background-position: none!important;
+	background-repeat: none!important;
+	background-size: none!important;
+}
