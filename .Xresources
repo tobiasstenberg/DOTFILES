@@ -30,8 +30,8 @@ Xcursor.size: 32
 ! ---------------------------------!
 
 #include ".xres/themes/solarized_dark_nord_bg_fg"
-#include ".xres/themes/solarized_dark_nord_bg_fg"
-#include ".xres/themes/solarized_dark_nord_bg_fg"
+! #include ".xres/themes/solarized_dark_nord_bg_fg"
+! #include ".xres/themes/solarized_dark_nord_bg_fg"
 
 #include ".xres/colors"
 
@@ -46,9 +46,30 @@ Xcursor.size: 32
 ! custom resources used by polybar and rofi to make gradients
 ! leave bar.bg blank for transparent background for polybar
 
-bar.barbg:  
-bar.barfg: #93a1a1
-bar.bgg1: #2E3440 
+bar.width: 2880
+bar.height: 35
+bar.offsetx: 0
+bar.offsety: 0
+
+! rofi does not yet support xoffset as a variable import so this has to do for now
+rofi.xoffset: 0
+rofi.yoffset: 0
+
+bar.paddinginner: 4.0
+bar.paddingouter: 10.0
+bar.barbg: #2E3440
+! bar.barbg: #3B4252
+! bar.barfg: #93a1a1
+bar.barfg: blu2
+
+! bar.bgg1: #b48ead 
+! bar.bgg2: #b48ead 
+! bar.bgg3: #5e81ac
+! bar.bgg4: #ebcb8b
+! bar.bgg5: #d08770 
+! bar.bgg6: #bf616a
+
+bar.bgg1: #2E3440
 bar.bgg2: #3B4252
 bar.bgg3: #434C5E
 bar.bgg4: #4C566A
