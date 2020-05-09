@@ -9,10 +9,12 @@
 * notification daemon: dunst + dunstify
 
 ## TO DO
-Find a way to merge Xresources into polybar with xrdb  
-Scale down the interfaces of GTK applications like GIMP and Inkscape  
-Find a more suitable way of loading different files for Xresources      
+Make inner and outer padding a setting that can be set from within .Xresources  
+Make a directory within .xres which has template layouts and color schemes for polybar and rofi  
+Find a way to dynamically change GTK2 and GTK3 themes based on .Xresources  
 Make a custom rofi menu to show i3 keybindings  
+Make a custom rofi menu to show vim keybindings for transitioning full time to vim
+Scale down the interfaces of GTK applications like GIMP and Inkscape  
 Configure appearance of dunst and dunstify  
 
 Add following features to dunst:  
@@ -24,39 +26,6 @@ Add following features to polybar:
 * Pacman and AUR updates counter
 * Number of unread emails and clickable exec to thunderbird
 * Github notification counter and clickable link
-
-## Keybindings
-Mod+Return:     st
-Mod+D:          rofi  
-Mod+E:          firefox  
-Mod+C:          thunar  
-Mod+Shift+R:    reset i3gaps    
-Mod+Q:          kill window  
-
-## Themes
-
-#### SOLARIZED DARK  
-#073642,  0: black  
-#dc322f,  1: red  
-#859900,  2: green  
-#b58900,  3: yellow  
-#268bd2,  4: blue  
-#d33682,  5: magenta  
-#2aa198,  6: cyan  
-#eee8d5,  7: white  
-#002b36,  8: brblack  
-#cb4b16,  9: brred  
-#586e75,  10: brgreen  
-#657b83,  11: bryellow  
-#839496,  12: brblue  
-#6c71c4,  13: brmagenta  
-#93a1a1,  14: brcyan  
-#fdf6e3,  15: brwhite  
-
-#282828,  258: bg  
-#ebdbb2,  259: fg  
-#add8e6,  256: cursor  
-#555555,  257: rev cursor  
 
 ## MacBook Pro specific settings
 
