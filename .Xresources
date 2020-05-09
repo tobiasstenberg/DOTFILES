@@ -1,138 +1,71 @@
+! ---------------!
+! HIDPI SETTINGS !
+! ---------------!
+
+! dpi and font rendering
 Xft.dpi:       192
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
 Xft.hintstyle: hintfull
 
-! Cursor
+! cursor
 Xcursor.theme: Adwaita
 Xcursor.size: 32
 
-! ------------------------------------------------------------------------------
-! SOLARIZED DARK
-! ------------------------------------------------------------------------------
+! ------!
+! FONTS !
+! ------!
 
-! black
-#define solar0 #073642
-#define solar8 #002b36
+#define fnt1 NotoSans
+#define fnt2 SourceCodePro
+#define fntsz1 7
+#define fntsz2 14
 
-! red
-#define solar1 #dc322f
-#define solar9 #cb4b16
+! its difficult to make general x settings for font sizes on a hidpi display
+!  since a lot of applications are scaled (see .profile)
 
-! green
-#define solar2 #859900
-#define solar10 #586e75
+! ---------------------------------!
+! FILE INCLUSIONS & COLORS SCHEMES !
+! ---------------------------------!
 
-! yellow
-#define solar3 #b58900
-#define solar11 #657b83
+#include ".xres/themes/solarized_dark_nord_bg_fg"
+#include ".xres/themes/solarized_dark_nord_bg_fg"
+#include ".xres/themes/solarized_dark_nord_bg_fg"
 
-! blue
-#define solar4 #268bd2
-#define solar12 #839496
+#include ".xres/colors"
 
-! magenta
-#define solar5 #d33682
-#define solar13 #6c71c4
+! files for specific programs can be loaded from separate files like this
+! rofi support for xresources will soon be deprecated though and should move to ~/.config/rofi
+! #include ".xres/rofi"
 
-! cyan
-#define solar6 #2aa198
-#define solar14 #93a1a1
+! -------------------------------!
+! POLYBAR AND ROFI COLOR SCHEMES !
+! -------------------------------!
 
-! white
-#define solar7 #eee8d5
-#define solar15 #fdf6e3
+! custom resources used by polybar and rofi to make gradients
+! leave bar.bg blank for transparent background for polybar
 
-! special
-! special
-!*.background:   #282828
-*.background:    #3B4252
-*.foreground:   #93a1a1
-*.cursorColor:  #add8e6
- .revCursor:    #555555
+bar.barbg:  
+bar.barfg: #93a1a1
+bar.bgg1: #2E3440 
+bar.bgg2: #3B4252
+bar.bgg3: #434C5E
+bar.bgg4: #4C566A
+bar.bgg5: #546076 
+bar.bgg6: #5C6A82
 
-*.color0: solar0
-*.color8: solar8
-*.color1: solar1
-*.color9: solar9
-*.color2: solar2
-*.color10: solar10
-*.color3: solar3
-*.color11: solar11
-*.color4: solar4
-*.color12: solar12
-*.color5: solar5
-*.color13: solar13
-*.color6: solar6
-*.color14: solar14
-*.color7: solar7
-*.color15: solar15
+! ----------------------------!
+! ADDITIONAL CUSTOM RESOURCES !
+! ----------------------------!
 
-! ------------------------------------------------------------------------------
-! NORD
-! ------------------------------------------------------------------------------
+! these additional custom resources could be in external files as well for easy switching
 
-#define nord0 #2E3440
-#define nord1 #3B4252
-#define nord2 #434C5E
-#define nord3 #4C566A
-#define nord4 #D8DEE9
-#define nord5 #E5E9F0
-#define nord6 #ECEFF4
-#define nord7 #8FBCBB
-#define nord8 #88C0D0
-#define nord9 #81A1C1
-#define nord10 #5E81AC
-#define nord11 #BF616A
-#define nord12 #D08770
-#define nord13 #EBCB8B
-#define nord14 #A3BE8C
-#define nord15 #B48EAD
-
-!*.foreground:   nord4
-!*.background:   nord0
-!*.cursorColor:  nord4
-
-!*.color0: nord1
-!*.color1: nord11
-!*.color2: nord14
-!*.color3: nord13
-!*.color4: nord9
-!*.color5: nord15
-!*.color6: nord8
-!*.color7: nord5
-!*.color8: nord3
-!*.color9: nord11
-!*.color10: nord14
-!*.color11: nord13
-!*.color12: nord9
-!*.color13: nord15
-!*.color14: nord7
-!*.color15: nord6
-
-!-------------!
-! ROFI CONFIG !
-!-------------!
-
-! state			    background	border		separator
-!rofi.color-window:	nord1,	    #191919,	nord11
-
-! state			    bg		    fg		    abg		    hbg		    hfg
-!rofi.color-normal:	nord1,	    #839496,	nord1,	    nord0,	    nord11
-
-! general
-!rofi.width: 33
-!rofi.padding: 30
-!rofi.hide-scrollbar: true
-!rofi.borderwidth: 0
-!rofi.columns: 1
-!rofi.lines: 5
-!rofi.separator-style: solid
-!rofi.font: Source Code Pro 8
-!rofi.terminal: st
-!rofi.dpi: 192
-
-!rofi.color-enabled: true
-!rofi.color-window: #f2a2f0, #f2a2f0, #f2a2f0
-!rofi.color-normal: #f2a2f0, #f2a2f0, #f2a2f0
+excol.accent: #8FBCBB
+excol.bg1: blk
+excol.bg2: bg
+excol.fg1: fg
+excol.fg2: wht2
+excol.redish: red
+excol.font1: fnt1
+excol.fontsz1: fntsz1

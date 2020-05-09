@@ -21,35 +21,44 @@
 ;--------;
 
 [colors]
+; the systemwide color scheme
+color0 = ${xrdb:color0:#00ff00}
+color1 = ${xrdb:color1:#00ff00}
+color2 = ${xrdb:color2:#00ff00}
+color3 = ${xrdb:color3:#00ff00}
+color4 = ${xrdb:color4:#00ff00}
+color5 = ${xrdb:color5:#00ff00}
+color6 = ${xrdb:color6:#00ff00}
+color7 = ${xrdb:color7:#00ff00}
+color8 = ${xrdb:color8:#00ff00}
+color9 = ${xrdb:color9:#00ff00}
+color10 = ${xrdb:color10:#00ff00}
+color11 = ${xrdb:color11:#00ff00}
+color12 = ${xrdb:color12:#00ff00}
+color13 = ${xrdb:color13:#00ff00}
+color14 = ${xrdb:color14:#00ff00}
+color15 = ${xrdb:color15:#00ff00}
 
-nord0 = #2E3440
-nord1 = #3B4252
-nord2 = #434C5E
-nord3 = #4C566A
-nord3.25 = #546076
-nord3.5 = #5C6A82
+; background is transparent as a fallback
+barbg = ${xrdb:bar.barbg:#00000000}
+barfg = ${xrdb:bar.barfg:#93a1a1}
 
-nord4 = #D8DEE9
-nord5 = #E5E9F0
-nord6 = #ECEFF4
+accent = ${xrdb:excol.accent:#FFFFFF}
 
-nord7 = #8FBCBB
-nord8 = #88C0D0
-nord9 = #81A1C1
-nord10 = #5E81AC
-
-nord11 = #BF616A
-nord12 = #D08770
-nord13 = #EBCB8B
-nord14 = #A3BE8C
-nord15 = #B48EAD
+; using custom background gradient variables from .Xresources
+; with a gradient of grey Nordic color scheme as fallback values
+bgg1 = ${xrdb:bar.bgg1:#2E3440}
+bgg2 = ${xrdb:bar.bgg2:#3B4252}
+bgg3 = ${xrdb:bar.bgg3:#434C5E}
+bgg4 = ${xrdb:bar.bgg4:#4C566A}
+bgg5 = ${xrdb:bar.bgg5:#546076}
+bgg6 = ${xrdb:bar.bgg6:#5C6A82}
 
 ;------------;
 ; DIMENSIONS ;
 ;------------;
 
 [bar/top]
-
 monitor = eDP1
 ;monitor = ${env:MONITOR:HDMI-1}
 dpi = 192
@@ -61,9 +70,8 @@ radius = 0.0
 fixed-center = true
 module-margin-top = 20.0
 
-background = #00000000
-;foreground = ${colors.nord3.5}
-foreground = #93a1a1
+background = ${colors.barbg}
+foreground = ${colors.barfg}
 
 ;---------------;
 ; MISCELLANEOUS ;
@@ -85,7 +93,11 @@ font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;1"
 font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=7;1"
 
-modules-left = battery backlight volume invisiblepadding i3 xwindow
+;---------------------------------;
+; MODULE ALIGNMENT ADN WM OPTIONS ;
+;---------------------------------;
+
+modules-left = battery backlight volume i3 xwindow
 modules-right = wlan network cpu temperature memory filesystem time
 
 ;tray-background = #0063ff
@@ -94,10 +106,10 @@ modules-right = wlan network cpu temperature memory filesystem time
 wm-restack = i3
 
 override-redirect = true
+enable-ipc = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
-
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
@@ -114,76 +126,11 @@ cursor-scroll = ns-resize
 inner = 4.0
 outer = 5
 
-;----------------------------------------------------------
-
-[module/invisiblepadding]
-type = custom/text
-content = "%{T3}        %{T-}"
-content-background = #00000000
-content-foreground = #000000
-
-[module/left]
-type = custom/text
-content = "%{T3}%{T-}"
-
-[module/right1]
-type = custom/text
-content = "%{T3}%{T-}"
-content-background = ${colors.nord0}
-content-foreground = ${colors.nord10}
-
-[module/right2]
-type = custom/text
-content = "%{T3}%{T-}"
-content-background = ${colors.nord1}
-content-foreground = ${colors.nord0}
-
-[module/right3]
-type = custom/text
-content = "%{T3}%{T-}"
-content-background = ${colors.nord2}
-content-foreground = ${colors.nord1}
-
-[module/right4]
-type = custom/text
-content = "%{T3}%{T-}"
-content-background = ${colors.nord3}
-content-foreground = ${colors.nord2}
-
-[module/right5]
-type = custom/text
-content = "%{T3}%{T-}"
-content-background = ${colors.nord3.25}
-content-foreground = ${colors.nord3}
-
-[module/right6]
-type = custom/text
-content = "%{T3}%{T-}"
-content-background = ${colors.nord3.5}
-content-foreground = ${colors.nord3.25}
-
-[module/right7]
-type = custom/text
-content = "%{T3}%{T-}"
-content-foreground = ${colors.nord3.5}
-
-[module/padding6]
-type = custom/text
-content = "%{B#546076}%{F}    %{B- F-}"
-content-foreground = ${colors.nord3.25}
-
-[module/padding7]
-type = custom/text
-content = "%{B#5C6A82}%{F}  %{B- F-}"
-content-foreground = ${colors.nord3.5}
-
-;----------------------------------------------------------
-
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
 label-padding = ${paddings.inner}
-label-background = ${colors.nord1}
+label-background = ${colors.bgg2}
 
 ;----------------------------------------------------------
 
@@ -208,18 +155,16 @@ label-indicator-underline = ${colors.secondary}
 [module/filesystem]
 format-margin-top = 2
 type = internal/fs
-interval = 25
+interval = 60
 
 mount-0 = /
 
 label-mounted = %{F${foreground}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
-
 label-mounted-padding = ${paddings.inner}
 label-unmounted-padding = ${paddings.inner}
-
-label-mounted-background = ${colors.nord3.25}
-label-unmounted-background = ${colors.nord3.25}
+label-mounted-background = ${colors.bgg5}
+label-unmounted-background = ${colors.bgg5}
 
 ;----------------------------------------------------------
 
@@ -234,11 +179,11 @@ wrapping-scroll = false
 
 label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.nord1}
+label-mode-background = ${colors.bgg2}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.nord2}
+label-focused-background = ${colors.bgg3}
 label-focused-foreground = #93a1a1
 label-focused-padding = 2
 
@@ -253,7 +198,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.nord15}
+label-urgent-background = ${colors.accent}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
@@ -303,20 +248,16 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 label =  %percentage%%
-
 label-padding = ${paddings.inner}
-
-label-background = ${colors.nord2}
+label-background = ${colors.bgg3}
 
 ;----------------------------------------------------------
 
 [module/memory]
 type = internal/memory
 label =  %gb_used%
-
 label-padding = ${paddings.inner}
-
-label-background = ${colors.nord3}
+label-background = ${colors.bgg4}
 
 ;----------------------------------------------------------
 
@@ -327,12 +268,10 @@ interval = 5
 
 label-connected =  %essid%
 label-disconnected =  Not Connected
-
 label-connected-padding = ${paddings.inner}
 label-disconnected-padding = ${paddings.inner}
-
-label-connected-background = ${colors.nord1}
-label-disconnected-background = ${colors.nord1}
+label-connected-background = ${colors.bgg2}
+label-disconnected-background = ${colors.bgg2}
 
 ;----------------------------------------------------------
 
@@ -340,28 +279,8 @@ label-disconnected-background = ${colors.nord1}
 type = internal/network
 interface = wlp2s0
 label-connected =  %downspeed% |  %upspeed%
-
 label-connected-padding = ${paddings.inner}
-
-label-connected-background = ${colors.nord1}
-
-;----------------------------------------------------------
-
-[module/eth]
-type = internal/network
-interface = eno1
-interval = 3.0
-
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+label-connected-background = ${colors.bgg2}
 
 ;----------------------------------------------------------
 
@@ -371,77 +290,23 @@ interval = 1.0
 ;date =  %H:%M
 date = %H:%M
 label-padding = ${paddings.inner}
-format-background = ${colors.nord3.5}
-
-;----------------------------------------------------------
-
-[module/date]
-type = internal/date
-interval = 5
-
-date =
-date-alt = " %Y-%m-%d"
-
-time = %H:%M
-time-alt = %H:%M:%S
-
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-
-label = %date% %time%
+format-background = ${colors.bgg6}
 
 ;----------------------------------------------------------
 
 [module/volume]
 type = internal/volume
-
 format-volume = <ramp-volume> <label-volume>
 format-muted =  0%
 
 format-volume-padding = ${paddings.inner}
 format-muted-padding-left = ${paddings.inner}
-
-format-volume-background = ${colors.nord1}
-format-muted-background = ${colors.nord1}
+format-volume-background = ${colors.bgg2}
+format-muted-background = ${colors.bgg2}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-
-;ramp-volume-0-padding-left = ${paddings.inner}
-;ramp-volume-1-padding-left = ${paddings.inner}
-;ramp-volume-2-padding-left = ${paddings.inner}
-
-;----------------------------------------------------------
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
-
-label-muted = 🔇 muted
-label-muted-foreground = #666
-
-label-volume-padding = ${paddings.inner}
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
 
 ;----------------------------------------------------------
 
@@ -478,7 +343,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/battery]
 type = internal/battery
 ; battery = BAT1
-poll-interval = 1
+poll-interval = 5
 full-at = 95
 
 label-discharging = %percentage%%
@@ -488,20 +353,16 @@ label-full = %percentage%%
 label-discharging-padding-right = ${paddings.inner}
 label-charging-padding-right = ${paddings.inner}
 label-full-padding-right = ${paddings.inner}
-
-label-discharging-background = ${colors.nord3}
-label-charging-background = ${colors.nord3}
-label-full-background = ${colors.nord3}
+label-discharging-background = ${colors.bgg4}
+label-charging-background = ${colors.bgg4}
+label-full-background = ${colors.bgg4}
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
 format-charging = <ramp-capacity> <label-charging>
-
-;format-charging-padding = ${paddings.inner}
-
-format-discharging-background = ${colors.nord3}
-format-charging-background = ${colors.nord3}
-format-full-background = ${colors.nord3}
+format-discharging-background = ${colors.bgg4}
+format-charging-background = ${colors.bgg4}
+format-full-background = ${colors.bgg4}
 
 ramp-capacity-0-padding-left = ${paddings.inner}
 ramp-capacity-1-padding-left = ${paddings.inner}
@@ -530,8 +391,8 @@ label = %percentage%%
 
 label-padding-right = ${paddings.inner}
 
-label-background = ${colors.nord2}
-format-background = ${colors.nord2}
+label-background = ${colors.bgg3}
+format-background = ${colors.bgg3}
 
 ramp-0 = 
 ramp-1 = 
@@ -549,15 +410,15 @@ thermal-zone = 0
 warn-temperature = 60
 
 label-padding-right = ${paddings.inner}
-label-background = ${colors.nord2}
-format-background = ${colors.nord2}
+label-background = ${colors.bgg3}
+format-background = ${colors.bgg3}
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.nord15}
+label-warn-foreground = ${colors.accent}
 
 ramp-0 = 
 ramp-1 = 
@@ -605,6 +466,63 @@ screenchange-reload = true
 ;compositing-foreground = source
 ;compositing-border = over
 ;pseudo-transparency = false
+
+;----------------------------------------------------------
+
+[module/left]
+type = custom/text
+content = "%{T3}%{T-}"
+
+[module/right1]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.bgg1}
+content-foreground = ${colors.color10}
+
+[module/right2]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.bgg2}
+content-foreground = ${colors.nord0}
+
+[module/right3]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.bgg3}
+content-foreground = ${colors.bgg2}
+
+[module/right4]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.bgg4}
+content-foreground = ${colors.bgg3}
+
+[module/right5]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.bgg5}
+content-foreground = ${colors.bgg4}
+
+[module/right6]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.bgg6}
+content-foreground = ${colors.bgg5}
+
+[module/right7]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground = ${colors.bgg6}
+
+[module/padding6]
+type = custom/text
+content = "%{B#546076}%{F}    %{B- F-}"
+content-foreground = ${colors.bgg5}
+
+[module/padding7]
+type = custom/text
+content = "%{B#5C6A82}%{F}  %{B- F-}"
+content-foreground = ${colors.bgg6}
 
 ;----------------------------------------------------------
 

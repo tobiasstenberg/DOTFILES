@@ -122,7 +122,7 @@ bindsym $mod+r mode "resize"
 #----------------#
 
 # rofi
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme oneliner
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # firefox
 bindsym $mod+e exec --no-startup-id firefox
@@ -135,7 +135,7 @@ bindsym $mod+Return exec --no-startup-id st
 bindsym $mod+Tab exec --no-startup-id st -name floating
 
 # restart i3 in place
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r exec --no-startup-id ~/scripts/reloader
 
 # lock i3
 bindsym $mod+m exec --no-startup-id ~/scripts/lock
@@ -179,7 +179,7 @@ exec_always --no-startup-id xrdb -merge ~/.Xresources
 
 exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/nord0.png
 
-exec_always --no-startup-id ~/scripts/launch_polybar
+exec_always --no-startup-id ~/scripts/launch_polybar_2
 
 exec --no-startup-id picom
 

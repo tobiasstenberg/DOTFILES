@@ -5,8 +5,7 @@
 
 rasi_file="$HOME/.config/rofi/globals.rasi"
 
-#just get the first color in the color scheme
-resources="color0 color1 color2 color3 color4 color5 color6 color7 color8 color9 color10 color11 color12 color13 color14 color15"
+resources="accent bg1 bg2 fg1 fg2 redish barfg bgg1 bgg2 bgg3 bgg4 bgg5 bgg6"
 
 for r in $resources; do
   echo $r
@@ -15,6 +14,6 @@ for r in $resources; do
   sed -i --follow-symlinks "/$r:/c\\$r: $xrvar\;" "$rasi_file"
 done
 
-#fnt=$(xrdb -query | awk '/font1/{print $2}')
-#fntsz=$(xrdb -query | awk '/fontsz1/{print $2}')
-#sed -i --follow-symlinks "/font1:/c\font1: \"$fnt $fntsz\"\;" "$rasi_file"
+fnt=$(xrdb -query | awk '/font1/{print $2}')
+fntsz=$(xrdb -query | awk '/fontsz1/{print $2}')
+sed -i --follow-symlinks "/font1:/c\font1: \"$fnt $fntsz\"\;" "$rasi_file"

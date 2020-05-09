@@ -1,0 +1,25 @@
+!-------------!
+! ROFI CONFIG !
+!-------------!
+
+! state			    background	border		separator
+!rofi.color-window:	nord1,	    #191919,	nord11
+
+! state			    bg		    fg		    abg		    hbg		    hfg
+!rofi.color-normal:	nord1,	    #839496,	nord1,	    nord0,	    nord11
+
+! general
+!rofi.width: 33
+!rofi.padding: 30
+!rofi.hide-scrollbar: true
+!rofi.borderwidth: 0
+!rofi.columns: 1
+!rofi.lines: 5
+!rofi.separator-style: solid
+!rofi.font: Source Code Pro 8
+!rofi.terminal: st
+!rofi.dpi: 192
+
+!rofi.color-enabled: true
+!rofi.color-window: #f2a2f0, #f2a2f0, #f2a2f0
+!rofi.color-normal: #f2a2f0, #f2a2f0, #f2a2f0

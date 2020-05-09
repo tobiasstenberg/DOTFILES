@@ -1,18 +1,17 @@
 * {
-color0: #073642;
-color1: #dc322f;
-color2: #859900;
-color3: #b58900;
-color4: #268bd2;
-color5: #d33682;
-color6: #2aa198;
-color7: #eee8d5;
-color8: #002b36;
-color9: #cb4b16;
-color10: #586e75;
-color11: #657b83;
-color12: #839496;
-color13: #6c71c4;
-color14: #93a1a1;
-color15: #fdf6e3;
+accent: #8FBCBB;
+bg1: #3B4252;
+bg2: #2E3440;
+fg1: #8FBCBB;
+fg2: #ECEFF4;
+redish: #BF616A;
+barbg: #000000;
+barfg: #93a1a1;
+bgg1: #2E3440;
+bgg2: #3B4252;
+bgg3: #434C5E;
+bgg4: #4C566A;
+bgg5: #546076;
+bgg6: #5C6A82;
+font1: "NotoSans 7";
 }
