@@ -1,0 +1,133 @@
+* {
+	border: none !important;
+	box-shadow: none !important;
+	border-width: 0px !important;
+}
+
+scrollbar {
+	border: none !important;
+	box-shadow: none !important;
+	border-width: 0px !important;
+}
+
+.tab-background[selected="true"] {
+	-moz-appearance: none !important;
+	background-attachment: none!important;
+	background-color: #2E3440!important;
+	background-image: none!important;
+	background-position: none!important;
+	background-repeat: none!important;
+	background-size: none!important;
+	border: none !important;
+}
+
+menubar { 
+	-moz-appearance: none !important;
+	background-attachment: none!important;
+	background-color: #2E3440!important;
+	background-image: none!important;
+	background-position: none!important;
+	background-repeat: none!important;
+	background-size: none!important;
+	border: none !important; 
+}
+
+toolbox {
+	-moz-appearance: none !important;
+	background-attachment: none!important;
+	background-color: #2E3440!important;
+	background-image: none!important;
+	background-position: none!important;
+	background-repeat: none!important;
+	background-size: none!important;
+	border: none !important; 
+}
+
+.tabs-toolbar {
+	-moz-appearance: none !important;
+	background-attachment: none!important;
+	background-color: #2E3440!important;
+	background-image: none!important;
+	background-position: none!important;
+	background-repeat: none!important;
+	background-size: none!important;
+	border: none !important;
+	margin-top: -1px !important; border-top-width: -1px !important;
+	margin-bottom: -1px !important; border-bottom-width: -1px !important;
+}
+
+#navigation-toolbox {
+	border: none !important;
+}
+
+toolbar, menubar {
+	border: none !important; 
+	background: transparent !important; 
+    border: none !important;
+    box-shadow: none !important;
+	margin-top: -1px !important; border-top-width: -1px !important;
+	margin-bottom: -1px !important; border-bottom-width: -1px !important;
+}
+
+toolbar, nav-bar > * {
+	-moz-appearance: none !important;
+  	background-attachment: none!important;
+  	background-color: #2E3440!important;
+  	background-image: none!important;
+	background-position: none!important;
+	background-repeat: none!important;
+	background-size: none!important;
+	border: none !important;
+}
+
+/* change color and background of header in the thread pane */
+treecol, .treecol-image {
+	-moz-appearance: none !important;
+	background-image: none !important;
+	border: none !important;
+	background-color: #2E3440 !important;
+	color:#d8dee9 !important;
+	margin-top: -1px !important; border-top-width: -1px !important;
+	margin-bottom: -1px !important; border-bottom-width: -1px !important;
+}
+
+/* change background color of currently selected and focused folder in the folder tree */
+#folderTree treechildren::-moz-tree-row(selected) {
+	-moz-appearance: none !important;
+	background-image: none !important;
+	border: none !important;
+	background-color: #2E3440 !important;	
+}
+
+#folderTree {
+	-moz-appearance: none !important;
+	background-image: none !important;
+	border: none !important;	
+}
+
+#dirTree-splitter, #sidebar-splitter, #threadpane-splitter,
+#results-splitter, #compose-toolbar-sizer, #attachment-splitter,
+#additionalFolderPaneSplitter, #threadpane-splitter,#calendarDisplayDeck, 
+#today-pane-splitter, #toolbar-splitter, #folderpane_splitter {
+	-moz-appearance: none !important;
+	border: none !important;
+	background-color: #2E3440 !important;
+}
+
+splitter {
+	-moz-appearance: none !important;
+	border: none !important;
+	background-color: #2E3440 !important;
+}
+
+.splitter {
+	-moz-appearance: none !important;
+	border: none !important;
+	background-color: #2E3440 !important;
+}
+
+.tree-splitter {
+	-moz-appearance: none !important;
+	border: none !important;
+	background-color: #2E3440 !important;
+}
