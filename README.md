@@ -8,11 +8,9 @@
 * file manager: thunar
 * notification daemon: dunst + dunstify
 
-## TO DO  
-Configure theme in oomox so shitty highlights in thunderbird and inkscape are fixed  
+## TO DO
+Make a custom rofi menu to show vim keybindings for transitioning full time to vim    
 Make a directory within .xres which has template layouts and color schemes for polybar and rofi  
-Make a custom rofi menu to show i3 keybindings  
-Make a custom rofi menu to show vim keybindings for transitioning full time to vim  
 Scale down the interfaces of GTK applications like GIMP and Inkscape  
 Find a way to dynamically change GTK2 and GTK3 themes based on .Xresources  
 Configure appearance of dunst and dunstify  
