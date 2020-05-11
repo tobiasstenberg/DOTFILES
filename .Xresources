@@ -66,12 +66,21 @@ bar.barbg:
 ! bar.barfg: #3B4352
 bar.barfg: #3B4252
 
+! homemade blue grey cyan
 bar.bgg1: #2E3440
 bar.bgg2: #5C6A82
-bar.bgg3: #a693A9CF
+bar.bgg3: #b6258F86
 bar.bgg4: #a25581CF
-bar.bgg5: #5581CF
+bar.bgg5: #fc5581CF
 bar.bgg6: #5C6A82
+
+! blues to grey
+!bar.bgg1: #2E3440
+!bar.bgg2: #5C6A82
+!bar.bgg3: #a693A9CF
+!bar.bgg4: #a25581CF
+!bar.bgg5: #5581CF
+!bar.bgg6: #5C6A82
 
 ! grey shit
 !bar.bgg1: #2E3440

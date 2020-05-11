@@ -185,7 +185,7 @@ label-mode-background = ${colors.bgg3}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.bgg4}
+label-focused-background = #a093A9CF
 label-focused-foreground = ${colors.barfg}
 label-focused-padding = 2
 
