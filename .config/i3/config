@@ -8,6 +8,8 @@ set $mod Mod4
 # font
 font pango:Hack 14
 
+# xrdb -query | grep bar.paddinginner | awk '{print $2}'
+
 #-----------------------------#
 # WINDOW / WORKSPACE COMMANDS #
 #-----------------------------#
@@ -121,6 +123,10 @@ bindsym $mod+r mode "resize"
 # BASIC BINDINGS #
 #----------------#
 
+# polybar
+bindsym $mod+p exec --no-startup-id ~/scripts/launch_polybar_2
+bindsym $mod+Shift+p exec --no-startup-id ~/scripts/launch_polybar_2
+
 # rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun
 
@@ -147,10 +153,13 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # GAPS #
 #------#
 
-gaps top 27
+gaps top 16
 gaps inner 10
-bindsym $mod+o gaps inner current set 0; gaps inner current set 10
-bindsym $mod+i gaps inner current set 10; gaps inner current set 20
+bindsym $mod+o gaps inner current set 0;        gaps inner current set 10
+bindsym $mod+i gaps inner current set 10;       gaps inner current set 20
+
+bindsym $mod+t gaps top all set -16;            gaps inner current set 20
+bindsym $mod+Shift+t gaps top all set 16;       gaps inner current set 20
 
 #------------#
 # APPEARANCE #
@@ -177,7 +186,7 @@ exec_always --no-startup-id xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_
 
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 
-exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/nord0.png
+exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/nord1.png
 
 exec_always --no-startup-id ~/scripts/launch_polybar_2
 

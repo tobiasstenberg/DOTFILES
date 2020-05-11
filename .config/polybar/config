@@ -58,14 +58,22 @@ bgg6 = ${xrdb:bar.bgg6:#5C6A82}
 ; DIMENSIONS ;
 ;------------;
 
+;----------------------------------------------------------
+
+[paddings]
+inner = ${xrdb:bar.paddinginner}
+outer = ${xrdb:bar.paddingouter}
+;inner = 4.0
+;outer = 5
+
 [bar/top]
 monitor = eDP1
 ;monitor = ${env:MONITOR:HDMI-1}
 dpi = 192
-width = 2840
-height = 35
-offset-x = 20
-offset-y = 20
+width = ${xrdb:bar.width}
+height = ${xrdb:bar.height}
+offset-x = ${xrdb:bar.offsetx}
+offset-y = ${xrdb:bar.offsety}
 radius = 0.0
 fixed-center = true
 module-margin-top = 20.0
@@ -120,12 +128,6 @@ cursor-scroll = ns-resize
 ; MODULES ;
 ;---------;
 
-;----------------------------------------------------------
-
-[paddings]
-inner = 4.0
-outer = 5
-
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
@@ -163,8 +165,8 @@ label-mounted = %{F${foreground}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-mounted-padding = ${paddings.inner}
 label-unmounted-padding = ${paddings.inner}
-label-mounted-background = ${colors.bgg5}
-label-unmounted-background = ${colors.bgg5}
+label-mounted-background = ${colors.bgg4}
+label-unmounted-background = ${colors.bgg4}
 
 ;----------------------------------------------------------
 
@@ -179,16 +181,18 @@ wrapping-scroll = false
 
 label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.bgg2}
+label-mode-background = ${colors.bgg3}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.bgg3}
-label-focused-foreground = #93a1a1
+label-focused-background = ${colors.bgg4}
+label-focused-foreground = ${colors.barfg}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
+;label-unfocused-background = ${colors.bgg2}
+label-unfocused-foreground = ${colors.bgg3}
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
@@ -290,7 +294,7 @@ interval = 1.0
 ;date =  %H:%M
 date = %H:%M
 label-padding = ${paddings.inner}
-format-background = ${colors.bgg6}
+format-background = ${colors.bgg5}
 
 ;----------------------------------------------------------
 
@@ -301,8 +305,8 @@ format-muted =  0%
 
 format-volume-padding = ${paddings.inner}
 format-muted-padding-left = ${paddings.inner}
-format-volume-background = ${colors.bgg2}
-format-muted-background = ${colors.bgg2}
+format-volume-background = ${colors.bgg3}
+format-muted-background = ${colors.bgg3}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -353,16 +357,16 @@ label-full = %percentage%%
 label-discharging-padding-right = ${paddings.inner}
 label-charging-padding-right = ${paddings.inner}
 label-full-padding-right = ${paddings.inner}
-label-discharging-background = ${colors.bgg4}
-label-charging-background = ${colors.bgg4}
-label-full-background = ${colors.bgg4}
+label-discharging-background = ${colors.bgg5}
+label-charging-background = ${colors.bgg5}
+label-full-background = ${colors.bgg5}
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
 format-charging = <ramp-capacity> <label-charging>
-format-discharging-background = ${colors.bgg4}
-format-charging-background = ${colors.bgg4}
-format-full-background = ${colors.bgg4}
+format-discharging-background = ${colors.bgg5}
+format-charging-background = ${colors.bgg5}
+format-full-background = ${colors.bgg5}
 
 ramp-capacity-0-padding-left = ${paddings.inner}
 ramp-capacity-1-padding-left = ${paddings.inner}
@@ -391,8 +395,8 @@ label = %percentage%%
 
 label-padding-right = ${paddings.inner}
 
-label-background = ${colors.bgg3}
-format-background = ${colors.bgg3}
+label-background = ${colors.bgg4}
+format-background = ${colors.bgg4}
 
 ramp-0 = 
 ramp-1 = 
@@ -468,6 +472,12 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 ;----------------------------------------------------------
+
+[module/invisiblepadding]
+type = custom/text
+content = "              "
+content-background = ${colors.bgg1}
+content-foreground = ${colors.color10}
 
 [module/left]
 type = custom/text
