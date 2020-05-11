@@ -8,10 +8,57 @@
 }
 
 toolbar, nav-bar > * {
-  background-attachment: none!important;
-  background-color: #2E3440!important;
-  background-image: none!important;
+	border: none !important;
+  	background-attachment: none!important;
+  	background-color: #2E3440!important;
+  	background-image: none!important;
 	background-position: none!important;
 	background-repeat: none!important;
 	background-size: none!important;
 }
+
+#nav-bar {
+    background: transparent !important; 
+    border: none !important;
+    box-shadow: none !important;
+	margin-top: -1px !important; border-top-width: -1px !important;
+	margin-bottom: -1px !important; border-bottom-width: -1px !important;
+}
+
+menubar { 
+	border: none !important; 
+}
+
+toolbox {
+	border: none !important; 
+}
+
+toolbar {
+	border: none !important; 
+}
+
+#urlbar-background {
+	border: none !important;
+}
+
+#back-button > .toolbarbutton-icon {
+	background-color: unset !important;
+	border: none !important;
+}
+
+#urlbar[focused="true"]{
+	-moz-appearance: none !important;
+	box-shadow: inset #00ffff 0px 0px 0px 0px!important;
+	border-color: var(--lwt-toolbar-field-border-color, hsla(255,0%,0%,0.9)) !important;
+	border-color: white !important;
+	border-width: 0px !important;
+}
+
+#searchbar .searchbar-textbox[focused="true"]{
+	-moz-appearance: none !important;
+	box-shadow: inset #00ffff 0px 0px 0px 0px!important;
+	border-color: var(--lwt-toolbar-field-border-color, hsla(255,0%,0%,0.9)) !important;
+	border-color: white !important;
+	border-width: 0px !important;
+}
+  
