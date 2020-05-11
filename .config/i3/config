@@ -123,9 +123,15 @@ bindsym $mod+r mode "resize"
 # BASIC BINDINGS #
 #----------------#
 
+# a binding to bring up the i3 keybindings menu
+# extremely helpful when learning new bindings
+bindsym $mod+y exec --no-startup-id ~/scripts/i3keybindings
+
 # polybar
-bindsym $mod+p exec --no-startup-id ~/scripts/launch_polybar_2
-bindsym $mod+Shift+p exec --no-startup-id ~/scripts/launch_polybar_2
+# exec polybar and set a new gap on the top
+bindsym $mod+p exec --no-startup-id ~/scripts/launch_polybar_2; gaps top all set 16;
+# kill polybar and set the top gap to the same as bottom gap
+bindsym $mod+Shift+p exec --no-startup-id killall -q polybar; gaps top all set -16
 
 # rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun
