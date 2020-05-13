@@ -1,0 +1,156 @@
+<span lang=':help keyword global' weight="normal" fallback="true" face='Source Code Pro 18'>:help</span><i>       open help for keyword</i>
+<span lang=':saveas file global' weight="normal" fallback="true" face='Source Code Pro 18'>:saveas file</span><i>       save file as</i>
+<span lang=':close global' weight="normal" fallback="true" face='Source Code Pro 18'>:close</span><i>       close current pane</i>
+<span lang='K global' weight="normal" fallback="true" face='Source Code Pro 18'>K</span><i>       open man page for word under the cursor</i>
+<span lang='h global' weight="normal" fallback="true" face='Source Code Pro 18'>h</span><i>       move cursor left</i>
+<span lang='j global' weight="normal" fallback="true" face='Source Code Pro 18'>j</span><i>       move cursor down</i>
+<span lang='k global' weight="normal" fallback="true" face='Source Code Pro 18'>k</span><i>       move cursor up</i>
+<span lang='l global' weight="normal" fallback="true" face='Source Code Pro 18'>l</span><i>       move cursor right</i>
+<span lang='H global' weight="normal" fallback="true" face='Source Code Pro 18'>H</span><i>       move to top of screen</i>
+<span lang='M global' weight="normal" fallback="true" face='Source Code Pro 18'>M</span><i>       move to middle of screen</i>
+<span lang='L global' weight="normal" fallback="true" face='Source Code Pro 18'>L</span><i>       move to bottom of screen</i>
+<span lang='w global' weight="normal" fallback="true" face='Source Code Pro 18'>w</span><i>       jump forwards to the start of a word</i>
+<span lang='W global' weight="normal" fallback="true" face='Source Code Pro 18'>W</span><i>       jump forwards to the start of a word (words can contain punctuation)</i>
+<span lang='e global' weight="normal" fallback="true" face='Source Code Pro 18'>e</span><i>       jump forwards to the end of a word</i>
+<span lang='E global' weight="normal" fallback="true" face='Source Code Pro 18'>E</span><i>       jump forwards to the end of a word (words can contain punctuation)</i>
+<span lang='b global' weight="normal" fallback="true" face='Source Code Pro 18'>b</span><i>       jump backwards to the start of a word</i>
+<span lang='B global' weight="normal" fallback="true" face='Source Code Pro 18'>B</span><i>       jump backwards to the start of a word (words can contain punctuation)</i>
+<span lang='% global' weight="normal" fallback="true" face='Source Code Pro 18'>%</span><i>       move to matching character (default supported pairs: '()', '{}', '[]' - use :h matchpairs in vim for more info)</i>
+<span lang='0 global' weight="normal" fallback="true" face='Source Code Pro 18'>0</span><i>       jump to the start of the line</i>
+<span lang='^ global' weight="normal" fallback="true" face='Source Code Pro 18'>^</span><i>       jump to the first non-blank character of the line</i>
+<span lang='$ global' weight="normal" fallback="true" face='Source Code Pro 18'>$</span><i>       jump to the end of the line</i>
+<span lang='g_ global' weight="normal" fallback="true" face='Source Code Pro 18'>g_</span><i>       jump to the last non-blank character of the line</i>
+<span lang='gg global' weight="normal" fallback="true" face='Source Code Pro 18'>gg</span><i>       go to the first line of the document</i>
+<span lang='G global' weight="normal" fallback="true" face='Source Code Pro 18'>G</span><i>       go to the last line of the document</i>
+<span lang='5G global' weight="normal" fallback="true" face='Source Code Pro 18'>5G</span><i>       go to line 5</i>
+<span lang='fx global' weight="normal" fallback="true" face='Source Code Pro 18'>fx</span><i>       jump to next occurrence of character x</i>
+<span lang='tx global' weight="normal" fallback="true" face='Source Code Pro 18'>tx</span><i>       jump to before next occurrence of character x</i>
+<span lang='Fx global' weight="normal" fallback="true" face='Source Code Pro 18'>Fx</span><i>       jump to previous occurence of character x</i>
+<span lang='Tx global' weight="normal" fallback="true" face='Source Code Pro 18'>Tx</span><i>       jump to after previous occurence of character x</i>
+<span lang='; global' weight="normal" fallback="true" face='Source Code Pro 18'>;</span><i>       repeat previous f, t, F or T movement</i>
+<span lang=', global' weight="normal" fallback="true" face='Source Code Pro 18'>,</span><i>       repeat previous f, t, F or T movement, backwards</i>
+<span lang='} global' weight="normal" fallback="true" face='Source Code Pro 18'>}</span><i>       jump to next paragraph (or function/block, when editing code)</i>
+<span lang='{ global' weight="normal" fallback="true" face='Source Code Pro 18'>{</span><i>       jump to previous paragraph (or function/block, when editing code)</i>
+<span lang='zz global' weight="normal" fallback="true" face='Source Code Pro 18'>zz</span><i>       center cursor on screen</i>
+<span lang='Ctrl + e global' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + e</span><i>       move screen down one line (without moving cursor)</i>
+<span lang='Ctrl + y global' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + y</span><i>       move screen up one line (without moving cursor)</i>
+<span lang='Ctrl + b global' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + b</span><i>       move back one full screen</i>
+<span lang='Ctrl + f global' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + f</span><i>       move forward one full screen</i>
+<span lang='Ctrl + d global' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + d</span><i>       move forward 1/2 a screen</i>
+<span lang='Ctrl + u global' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + u</span><i>       move back 1/2 a screen</i>
+<span lang='i global' weight="normal" fallback="true" face='Source Code Pro 18'></span>i<i>       insert before the cursor</i>
+<span lang='I global' weight="normal" fallback="true" face='Source Code Pro 18'></span>I<i>       insert at the beginning of the line</i>
+<span lang='a global' weight="normal" fallback="true" face='Source Code Pro 18'></span>a<i>       insert (append) after the cursor</i>
+<span lang='A global' weight="normal" fallback="true" face='Source Code Pro 18'></span>A<i>       insert (append) at the end of the line</i>
+<span lang='o global' weight="normal" fallback="true" face='Source Code Pro 18'></span>o<i>       append (open) a new line below the current line</i>
+<span lang='0 global' weight="normal" fallback="true" face='Source Code Pro 18'></span>0<i>       append (open) a new line above the current line</i>
+<span lang='ea global' weight="normal" fallback="true" face='Source Code Pro 18'></span>ea<i>       insert (append) at the end of the word</i>
+<span lang='Escape global' weight="normal" fallback="true" face='Source Code Pro 18'></span>Escape<i>       exit insert mode</i>
+<span lang='r editing' weight="normal" fallback="true" face='Source Code Pro 18'></span>r<i>       replace a single character</i>
+<span lang='J editing' weight="normal" fallback="true" face='Source Code Pro 18'></span>J<i>       join line below to the current one with one space in between</i>
+<span lang='gJ editing' weight="normal" fallback="true" face='Source Code Pro 18'></span>gJ<i>       join line below to the current one without space in between</i>
+<span lang='gwip editing' weight="normal" fallback="true" face='Source Code Pro 18'>gwip</span><i>       reflow paragraph</i>
+<span lang='cc editing' weight="normal" fallback="true" face='Source Code Pro 18'>cc</span><i>       change (replace) entire line</i>
+<span lang='C editing' weight="normal" fallback="true" face='Source Code Pro 18'>C</span><i>       change (replace) to the end of the line</i>
+<span lang='c$ editing' weight="normal" fallback="true" face='Source Code Pro 18'>c$</span><i>       change (replace) to the end of the line</i>
+<span lang='ciw editing' weight="normal" fallback="true" face='Source Code Pro 18'>ciw</span><i>       change (replace) entire word</i>
+<span lang='cw editing' weight="normal" fallback="true" face='Source Code Pro 18'>cw</span><i>       change (replace) to the end of the word</i>
+<span lang='s editing' weight="normal" fallback="true" face='Source Code Pro 18'>s</span><i>       delete character and substitute text</i>
+<span lang='S editing' weight="normal" fallback="true" face='Source Code Pro 18'>S</span><i>       delete line and substitute text (same as cc)</i>
+<span lang='xp editing' weight="normal" fallback="true" face='Source Code Pro 18'>xp</span><i>       transpose two letters (delete and paste)</i>
+<span lang='u editing' weight="normal" fallback="true" face='Source Code Pro 18'>u</span><i>       undo</i>
+<span lang='Ctrl + r editing' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + r</span><i>       redo</i>
+<span lang='. editing' weight="normal" fallback="true" face='Source Code Pro 18'>.</span><i>       repeat last command</i>
+<span lang='v visual mode' weight="normal" fallback="true" face='Source Code Pro 18'>v</span><i>       start visual mode, mark lines, then do a command (like y-yank)</i>
+<span lang='V visual mode' weight="normal" fallback="true" face='Source Code Pro 18'>V</span><i>       start linewise visual mode</i>
+<span lang='o visual mode' weight="normal" fallback="true" face='Source Code Pro 18'>o</span><i>       move to other end of marked area</i>
+<span lang='Ctrl + v visual mode' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + v</span><i>       start visual block mode</i>
+<span lang='O visual mode' weight="normal" fallback="true" face='Source Code Pro 18'></span>O<i>       move to other corner of block</i>
+<span lang='aw visual mode' weight="normal" fallback="true" face='Source Code Pro 18'></span>aw<i>       mark a word</i>
+<span lang='ab visual mode' weight="normal" fallback="true" face='Source Code Pro 18'></span>ab<i>       a block with ()</i>
+<span lang='aB visual mode' weight="normal" fallback="true" face='Source Code Pro 18'></span>aB<i>       a block with {}</i>
+<span lang='ib visual mode' weight="normal" fallback="true" face='Source Code Pro 18'></span>ib<i>       inner block with ()</i>
+<span lang='iB visual mode' weight="normal" fallback="true" face='Source Code Pro 18'></span>iB<i>       inner block with {}</i>
+<span lang='Escape visual mode' weight="normal" fallback="true" face='Source Code Pro 18'>Escape</span><i>       exit visual mode</i>
+<span lang='> visual commands' weight="normal" fallback="true" face='Source Code Pro 18'>></span><i>       shift text right</i>
+<span lang='< visual commands' weight="normal" fallback="true" face='Source Code Pro 18'><</span><i>       shift text left</i>
+<span lang='y visual commands' weight="normal" fallback="true" face='Source Code Pro 18'>y</span><i>       yank (copy) marked text</i>
+<span lang='d visual commands' weight="normal" fallback="true" face='Source Code Pro 18'>d</span><i>       delete marked text</i>
+<span lang='~ visual commands' weight="normal" fallback="true" face='Source Code Pro 18'>~</span><i>       switch case</i>
+<span lang=':reg registers' weight="normal" fallback="true" face='Source Code Pro 18'>:reg</span><i>       show registers content</i>
+<span lang='"xy registers' weight="normal" fallback="true" face='Source Code Pro 18'>"xy</span><i>       yank into register x</i>
+<span lang='"xp registers' weight="normal" fallback="true" face='Source Code Pro 18'>"xp</span><i>       paste contents of register x</i>
+<span lang=':marks registers' weight="normal" fallback="true" face='Source Code Pro 18'>:marks</span><i>       list of marks</i>
+<span lang='ma registers' weight="normal" fallback="true" face='Source Code Pro 18'>ma</span><i>       set current position for mark A</i>
+<span lang='`a registers' weight="normal" fallback="true" face='Source Code Pro 18'>`a</span><i>       jump to position of mark A</i>
+<span lang='y`a registers' weight="normal" fallback="true" face='Source Code Pro 18'>y`a</span><i>       yank text to position of mark A</i>
+<span lang='qa macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>qa<i>       record macro a</i>
+<span lang='q macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>q<i>       stop recording macro</i>
+<span lang='@a macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>@a<i>       run macro a</i>
+<span lang='@@ macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>@@<i>       rerun last run macro</i>
+<span lang='yy macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>yy<i>       yank (copy) a line</i>
+<span lang='2yy macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>2yy<i>       yank (copy) 2 lines</i>
+<span lang='yw macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>yw<i>       yank (copy) the characters of the word from the cursor position to the start of the next word</i>
+<span lang='y$ macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>y$<i>       yank (copy) to end of line</i>
+<span lang='p macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>p<i>       put (paste) the clipboard after cursor</i>
+<span lang='P macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>P<i>       put (paste) before cursor</i>
+<span lang='dd macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>dd<i>       delete (cut) a line</i>
+<span lang='2dd macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>2dd<i>       delete (cut) 2 lines</i>
+<span lang='dw macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>dw<i>       delete (cut) the characters of the word from the cursor position to the start of the next word</i>
+<span lang='D macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>D<i>       delete (cut) to the end of the line</i>
+<span lang='d$ macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>d$<i>       delete (cut) to the end of the line</i>
+<span lang='x macros' weight="normal" fallback="true" face='Source Code Pro 18'></span>x<i>       delete (cut) character</i>
+<span lang=':w exiting' weight="normal" fallback="true" face='Source Code Pro 18'></span>:w<i>       write (save) the file, but don't exit</i>
+<span lang=':w !sudo tee % exiting' weight="normal" fallback="true" face='Source Code Pro 18'>:w !sudo tee %</span><i>       write out the current file using sudo</i>
+<span lang=':wq exiting' weight="normal" fallback="true" face='Source Code Pro 18'></span>:wq<i>       write (save) and quit</i>
+<span lang=':x exiting' weight="normal" fallback="true" face='Source Code Pro 18'></span>:x<i>       write (save) and quit</i>
+<span lang=':ZZ exiting' weight="normal" fallback="true" face='Source Code Pro 18'></span>:ZZ<i>       write (save) and quit</i>
+<span lang=':q exiting' weight="normal" fallback="true" face='Source Code Pro 18'></span>:q<i>       quit (fails if there are unsaved changes)</i>
+<span lang=':q! exiting' weight="normal" fallback="true" face='Source Code Pro 18'></span>:q!<i>       quit and throw away unsaved changes</i>
+<span lang=':ZQ exiting' weight="normal" fallback="true" face='Source Code Pro 18'></span>:ZQ<i>       quit and throw away unsaved changes</i>
+<span lang=':wqa exiting' weight="normal" fallback="true" face='Source Code Pro 18'></span>:wqa<i>       write (save) and quit on all tabs</i>
+<span lang='/pattern search replace' weight="normal" fallback="true" face='Source Code Pro 18'>/pattern</span><i>       search for pattern</i>
+<span lang='?pattern search replace' weight="normal" fallback="true" face='Source Code Pro 18'></span>?pattern<i>       search backward for pattern</i>
+<span lang='\vpattern search replace' weight="normal" fallback="true" face='Source Code Pro 18'>\vpattern</span><i>       'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)</i>
+<span lang='n search replace' weight="normal" fallback="true" face='Source Code Pro 18'></span>n<i>       repeat search in same direction</i>
+<span lang='N search replace' weight="normal" fallback="true" face='Source Code Pro 18'></span>N<i>       repeat search in opposite direction</i>
+<span lang=':%s/old/new/g search replace' weight="normal" fallback="true" face='Source Code Pro 18'>:%s/old/new/g</span><i>       replace all old with new throughout file</i>
+<span lang=':%s/old/new/gc search replace' weight="normal" fallback="true" face='Source Code Pro 18'>:%s/old/new/gc</span><i>       replace all old with new throughout file with confirmations</i>
+<span lang=':noh search replace' weight="normal" fallback="true" face='Source Code Pro 18'></span>:noh<i>       remove highlighting of search matches</i>
+<span lang=':vimgrep /pattern/ {`{file}`} search files' weight="normal" fallback="true" face='Source Code Pro 18'>:vimgrep /pattern/ {`{file}`}</span><i>       search for pattern in multiple files</i>
+<span lang=':cn search files' weight="normal" fallback="true" face='Source Code Pro 18'>:cn</span><i>       jump to the next match</i>
+<span lang=':cp search files' weight="normal" fallback="true" face='Source Code Pro 18'>:cp</span><i>       jump to the previous match</i>
+<span lang=':copen search files' weight="normal" fallback="true" face='Source Code Pro 18'>:copen</span><i>       open a window containing the list of matches</i>
+<span lang=':e multiple files' weight="normal" fallback="true" face='Source Code Pro 18'></span>:e<i>       edit a file in a new buffer</i>
+<span lang=':bnext multiple files' weight="normal" fallback="true" face='Source Code Pro 18'></span>:bnext<i>       go to the next buffer</i>
+<span lang=':bn multiple files' weight="normal" fallback="true" face='Source Code Pro 18'></span>:bn<i>       go to the next buffer</i>
+<span lang=':bprev multiple files' weight="normal" fallback="true" face='Source Code Pro 18'></span>:bprev<i>       go to the previous buffer</i>
+<span lang=':bp multiple files' weight="normal" fallback="true" face='Source Code Pro 18'></span>:bp<i>       go to the previous buffer</i>
+<span lang=':bd multiple files' weight="normal" fallback="true" face='Source Code Pro 18'></span>:bd<i>       delete a buffer (close a file)</i>
+<span lang=':ls multiple files' weight="normal" fallback="true" face='Source Code Pro 18'></span>:ls<i>       list all open buffers</i>
+<span lang=':sp multiple files' weight="normal" fallback="true" face='Source Code Pro 18'></span>:sp<i>       open a file in a new buffer and split window</i>
+<span lang=':vsp multiple files' weight="normal" fallback="true" face='Source Code Pro 18'></span>:vsp<i>        open a file in a new buffer and vertically split window</i>
+<span lang='Ctrl + ws multiple files' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + ws</span><i>       split window</i>
+<span lang='Ctrl + ww multiple files' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + ww</span><i>       switch windows</i>
+<span lang='Ctrl + wq multiple files' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + wq</span><i>       quit a window</i>
+<span lang='Ctrl + wv multiple files' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + wv</span><i>       split window vertically</i>
+<span lang='Ctrl + wh multiple files' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + wh</span><i>       move cursor to the left window (vertical split)</i>
+<span lang='Ctrl + wj multiple files' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + wj</span><i>       move cursor to the right window (vertical split)</i>
+<span lang='Ctrl + wk multiple files' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + wk</span><i>       move cursor to the window below (horizontal split)</i>
+<span lang='Ctrl + wl multiple files' weight="normal" fallback="true" face='Source Code Pro 18'>Ctrl + wl</span><i>       move cursor to the window above (horizontal split)</i>
+<span lang=':tabnew tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabnew</span><i>       open a file in a new tab</i>
+<span lang=':tabnew {page.words.file} tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabnew {page.words.file}</span><i>       open a file in a new tab</i>
+<span lang='Ctrl + wT tabs' weight="normal" fallback="true" face='Source Code Pro 18'></span>Ctrl + wT<i>       move the current split window into its own tab</i>
+<span lang='gt tabs' weight="normal" fallback="true" face='Source Code Pro 18'></span>gt<i>       move to the next tab</i>
+<span lang=':tabnext tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabnext</span><i>       move to the next tab</i>
+<span lang=':tabn tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabn</span><i>       move to the next tab</i>
+<span lang='gT tabs' weight="normal" fallback="true" face='Source Code Pro 18'>gT</span><i>       move to the previous tab</i>
+<span lang=':tabprev tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabprev</span><i>       move to the previous tab</i>
+<span lang=':tabp tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabp</span><i>       move to the previous tab</i>
+<span lang='#gt tabs' weight="normal" fallback="true" face='Source Code Pro 18'>#gt</span><i>       move to tab number #</i>
+<span lang=':tabmove # tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabmove</span><i>       move current tab to the #th position (indexed from 0)</i>
+<span lang=':tabclose tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabclose</span><i>       close the current tab and all its windows</i>
+<span lang=':tabc tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabc</span><i>       close the current tab and all its windows</i>
+<span lang=':tabonly tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabonly</span><i>       close all tabs except for the current one</i>
+<span lang=':tabo tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabo</span><i>       close all tabs except for the current one</i>
+<span lang=':tabdo tabs' weight="normal" fallback="true" face='Source Code Pro 18'>:tabdo</span><i>       run the command on all tabs (e.g. :tabdo q - closes all opened tabs)</i>

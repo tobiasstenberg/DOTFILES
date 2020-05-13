@@ -5,7 +5,7 @@ c0='#00000000' # clear
 c1='#33B48EAD' # black
 c2='#ffffffff' # white
 c3='#000000ff' # red
-c4='#FF81A1C1' # blue
+c4='#a481A1C1' # blue
 
 i3lock \
 --insidevercolor=$c0	\

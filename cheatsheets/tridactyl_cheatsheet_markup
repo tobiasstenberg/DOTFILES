@@ -1,0 +1,59 @@
+<span lang=':help keyword - open help for keyword' weight="normal"  face='Source Code Pro 18'>:help</span><i>     open help for keyword</i>
+<span lang=':' weight="normal" fallback="true" >:</span><i>    activate the command line</i>
+<span lang='Shift+Insert' weight="normal" fallback="true" >Shift+Insert</span><i>    enter "ignore mode"</i>
+<span lang='ZZ' weight="normal" fallback="true" >ZZ</span><i>    close all tabs and windows</i>
+<span lang='.' weight="normal" fallback="true" >.</span><i>    repeat the last command</i>
+<span lang='C-v' weight="normal" fallback="true" >C-v</span><i>    send a single keystroke to the current website</i>
+<span lang='h' weight="normal" fallback="true" >h</span><i>    scroll left</i>
+<span lang='j' weight="normal" fallback="true" >j</span><i>    scroll down</i>
+<span lang='k' weight="normal" fallback="true" >k</span><i>    scroll up</i>
+<span lang='l' weight="normal" fallback="true" >l</span><i>    scroll right</i>
+<span lang='^/$' weight="normal" fallback="true" >^/$</span><i>    scroll to left/right margin</i>
+<span lang='gg/G' weight="normal" fallback="true" >gg/G</span><i>    scroll to start/end of page</i>
+<span lang='f' weight="normal" fallback="true" >f</span><i>    enter "hint mode" to select a link to follow</i>
+<span lang='F' weight="normal" fallback="true" >F</span><i>    enter "hint mode" in a background tab</i>
+<span lang='gF' weight="normal" fallback="true" >gF</span><i>    to repeatedly open links until you hit `Escape`</i>
+<span lang='gi' weight="normal" fallback="true" >gi</span><i>    scroll to and focus the last-used input on the page</i>
+<span lang='r/R' weight="normal" fallback="true" >r/R</span><i>    reload page or hard reload page</i>
+<span lang='yy' weight="normal" fallback="true" >yy</span><i>    copy the current page URL to the clipboard</i>
+<span lang='[[/]]' weight="normal" fallback="true" >[[/]]</span><i>    navigate forward/backward though paginated pages</i>
+<span lang=']c/[c' weight="normal" fallback="true" >]c/[c</span><i>    increment/decrement the current URL by 1</i> 
+<span lang='gu' weight="normal" fallback="true" >gu</span><i>    go to the parent of the current URL</i>
+<span lang='gU' weight="normal" fallback="true" >gU</span><i>    go to the root domain of the current URL</i>
+<span lang='gr' weight="normal" fallback="true" >gr</span><i>    open FF reader mode (Tridactyl will not work in this mode)</i>
+<span lang='zi' weight="normal" fallback="true" >zi</span><i>    zoom in</i>
+<span lang='zo' weight="normal" fallback="true" >zo</span><i>    zoom out</i>
+<span lang='zz' weight="normal" fallback="true" >zz</span><i>    zoom reset</i>
+<span lang='C-f/C-b' weight="normal" fallback="true" >C-f/C-b</span><i>    jump to the next/previous part of the page</i>
+<span lang='g?' weight="normal" fallback="true" >g?</span><i>    Apply Caesar cipher to page (run `g?` again to switch back)</i>
+<span lang='/' weight="normal" fallback="true" >/</span><i>    open the find search box</i>
+<span lang='C-g/C-G' weight="normal" fallback="true" >C-g/C-G</span><i>    find the next/previous instance of the last find operation</i>
+<span lang='A' weight="normal" fallback="true" >A</span><i>    bookmark the current page</i>
+<span lang='a' weight="normal" fallback="true" >a</span><i>    bookmark the current page, but allow the URL to be modified first</i>
+<span lang='M key' weight="normal" fallback="true" >M key</span><i>    bind a quickmark to the given key</i>
+<span lang='go key' weight="normal" fallback="true" >go key</span><i>    open a given quickmark in current tab</i>
+<span lang='gn key' weight="normal" fallback="true" >gn key</span><i>    open a given quickmark in new tab</i>
+<span lang='gw key' weight="normal" fallback="true" >gw key</span><i>    open a given quickmark in new window</i>
+<span lang='o/O' weight="normal" fallback="true" >o/O</span><i>    open a URL (or default search) in this tab (`O` to pre-load current URL)</i>
+<span lang='t/T' weight="normal" fallback="true" >t/T</span><i>    open a URL (or default search) in a new tab (`T` to pre-load current URL)</i>
+<span lang='w/W' weight="normal" fallback="true" >w/W</span><i>    open a URL (or default search) in a new window (`W` to pre-load current URL)</i>
+<span lang='p/P' weight="normal" fallback="true" >p/P</span><i>    open the clipboard contents in the current/new tab</i>
+<span lang='s/S' weight="normal" fallback="true" >s/S</span><i>    force a search using the default Tridactyl search engine in current or new tab</i>
+<span lang='H/L' weight="normal" fallback="true" >H/L</span><i>    go back/forward in the tab history</i>
+<span lang='gh/gH' weight="normal" fallback="true" >gh/gH</span><i>     go to the pages you have set with `set home [url1] [url2] ...`</i>
+<span lang='d' weight="normal" fallback="true" >d</span><i>    close the current tab</i>
+<span lang='u' weight="normal" fallback="true" >u</span><i>    undo the last tab/window closure</i>
+<span lang='gt/gT' weight="normal" fallback="true" >gt/gT</span><i>    go to the next/previous tab</i>
+<span lang='g^/g$' weight="normal" fallback="true" >g^/g$</span><i>    go to the first/last tab</i>
+<span lang='C-^' weight="normal" fallback="true" >C-^</span><i>    go to the last active tab</i>
+<span lang='b' weight="normal" fallback="true" >b</span><i>    bring up a list of open tabs in the current window; you can type the tab ID or part of the title or URL to choose a tab</i>
+<span lang=';i/;I' weight="normal" fallback="true" >;i/;I</span><i>    open an image (in current/new tab)</i>
+<span lang=';s/;a' weight="normal" fallback="true" >;s/;a</span><i>    save/save-as the linked resource</i>
+<span lang=';S/;A' weight="normal" fallback="true" >;S/;A</span><i>    save/save-as the selected image</i>
+<span lang=';p' weight="normal" fallback="true" >;p</span><i>    copy an element's text to the clipboard</i>
+<span lang=';P' weight="normal" fallback="true" >;P</span><i>    copy an element's title/alt text to the clipboard</i>
+<span lang=';y' weight="normal" fallback="true" >;y</span><i>    copy an element's link URL to the clipboard</i>
+<span lang=';#' weight="normal" fallback="true" >;#</span><i>    copy an element's anchor URL to the clipboard</i>
+<span lang=';r' weight="normal" fallback="true" >;r</span><i>    read the element's text with text-to-speech</i>
+<span lang=';k' weight="normal" fallback="true" >;k</span><i>    delete an element from the page</i>
+<span lang=';;' weight="normal" fallback="true" >;;</span><i>    focus an element</i>

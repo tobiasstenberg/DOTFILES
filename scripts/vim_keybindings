@@ -1,8 +1,17 @@
 #!/bin/bash
 
+# the purpose of this script is to output a searchable menu of vim keybindings
+# it takes a plain text file using this simple shitty syntax:
+# a line containing the title of a general section is preceded with the with "section "
+# a line containing an entry is preceded with "entry "
+# change the location of your cheatsheet
+# yep, it's simple and shitty but it will give a highly usable and searchable cheatsheet
+
+: '
+
 declare -A keys
 
-eval "$(i3-msg -t get_config | awk '
+eval "$(cat ~/documents/cheatsheets/vim_cheatsheet | awk '
   BEGIN {foundkeys=0}
   {
     if($1=="mode") {ismode=1}
@@ -12,7 +21,7 @@ eval "$(i3-msg -t get_config | awk '
     for(k in variables){
       gsub("[$]"k,variables[k],$0)
     }
-    if($1=="bindsym" && ismode!=1){
+    if(ismode!=1){
       gsub("[$]","\\$",original)
       if($0!~"exec"){msg="i3-msg "}
       else {msg=""}
@@ -51,8 +60,10 @@ selected="$({
   for ((i=0;i<foundkeys;i++)); do
     echo "${keys[${i}-bindsym]}" "${keys[${i}-cmd]}"
   done
-} | rofi -dmenu -format i -theme oneliner)"
+} | rofi -dmenu -format i)"
 
 [[ -z $selected ]] && exit 1
 
 eval "${keys[${selected}-realcmd]}"
+
+'

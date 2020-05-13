@@ -20,11 +20,20 @@ floating_modifier $mod
 # kill focused window
 bindsym $mod+q kill
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# change focus - vim style
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alt-tab focus
+# bindsym $mod+Tab exec i3-msg border pixel; focus right
+
+# change focus - typist
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
+# bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -32,11 +41,17 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+# move focused window - vim style
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# move focused window - typist
+# bindsym $mod+Shift+j move left
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+l move up
+# bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -44,8 +59,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+h split h
+# split in horizontal orientation - remapped to be next to vert bind
+bindsym $mod+c split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -100,10 +115,15 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # bindsym j resize shrink width 10 px or 10 ppt
+        # bindsym k resize grow height 10 px or 10 ppt
+        # bindsym l resize shrink height 10 px or 10 ppt
+        # bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -123,9 +143,13 @@ bindsym $mod+r mode "resize"
 # BASIC BINDINGS #
 #----------------#
 
-# a binding to bring up the i3 keybindings menu
-# extremely helpful when learning new bindings
+# binding for testing purposes
+bindsym $mod+g exec --no-startup-id ~/scripts/vim_keybindings
+bindsym $mod+Shift+g exec --no-startup-id ~/scripts/vim_keybindings_markup
+
+# custom rofi menus
 bindsym $mod+y exec --no-startup-id ~/scripts/i3keybindings
+bindsym $mod+Shift+y exec --no-startup-id ~/scripts/tridactyl_keybindings_markup
 
 # polybar
 # exec polybar and set a new gap on the top
@@ -134,17 +158,17 @@ bindsym $mod+p exec --no-startup-id ~/scripts/launch_polybar_2; gaps top all set
 bindsym $mod+Shift+p exec --no-startup-id killall -q polybar; gaps top all set -16
 
 # rofi
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/oneliner.rasi
 
 # firefox
 bindsym $mod+e exec --no-startup-id firefox
 
 # thunar
-bindsym $mod+c exec --no-startup-id thunar
+bindsym $mod+t exec --no-startup-id thunar
 
 # st
 bindsym $mod+Return exec --no-startup-id st
-bindsym $mod+Tab exec --no-startup-id st -name floating
+# bindsym $mod+Shift+Return exec --no-startup-id st -name floating
 
 # restart i3 in place
 bindsym $mod+Shift+r exec --no-startup-id ~/scripts/reloader
@@ -164,8 +188,8 @@ gaps inner 10
 bindsym $mod+o gaps inner current set 0;        gaps inner current set 10
 bindsym $mod+i gaps inner current set 10;       gaps inner current set 20
 
-bindsym $mod+t gaps top all set -16;            gaps inner current set 20
-bindsym $mod+Shift+t gaps top all set 16;       gaps inner current set 20
+# bindsym $mod+t gaps top all set -16;            gaps inner current set 20
+# bindsym $mod+Shift+t gaps top all set 16;       gaps inner current set 20
 
 #------------#
 # APPEARANCE #
@@ -176,7 +200,7 @@ for_window [class="^.*"] border pixel 0
 #for_window [class=".*"] title_format "<span font='Hack 10'> > %title</span>"
 
 # class				border		background	text		indicator	child border
-client.focused          	#		#		#	 	#		#
+client.focused          	#		#		#	 	#		#268bd2
 client.unfocused        	#		#		#		#		#
 client.focused_inactive 	#		#		#		#		#
 client.urgent           	#		#		#		#		#

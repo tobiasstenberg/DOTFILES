@@ -1,0 +1,17 @@
+#!/bin/bash
+
+options='-columns 6 -width 100 -lines 10 -bw 2' 
+
+selected=$(\
+  cat ~/documents/cheatsheets/tridactyl_cheatsheet_markup \
+    | rofi -dmenu -i -markup-rows -p "firefox bindings" -color-enabled -theme oneliner \
+    ${options}
+    )
+
+# exit if nothing is selected
+[[ -z $selected ]] && exit
+
+echo -ne $(echo "$selected" |\
+  awk -F';' -v RS='>' '
+    NR==2{sub("&#x","",$1);print "\\u" $1;exit}'
+) |  xclip -selection clipboard

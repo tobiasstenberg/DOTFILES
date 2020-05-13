@@ -5,7 +5,7 @@
 
 rasi_file="$HOME/.config/rofi/globals.rasi"
 
-resources="accent bg1 bg2 fg1 fg2 redish barfg bgg1 bgg2 bgg3 bgg4 bgg5 bgg6"
+resources="accent bg1 bg2 fg1 fg2 redish width height offsetx offsety paddinginner paddingouter barfg bgg1 bgg2 bgg3 bgg4 bgg5 bgg6"
 
 for r in $resources; do
   echo $r

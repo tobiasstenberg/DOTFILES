@@ -10,6 +10,7 @@
 
 ## TO DO
 Make a custom rofi menu to show vim keybindings for transitioning full time to vim    
+Make a custom rofi menu for clipping Font Awesome icons with rofi      
 Make a directory within .xres which has template layouts and color schemes for polybar and rofi  
 Scale down the interfaces of GTK applications like GIMP and Inkscape  
 Find a way to dynamically change GTK2 and GTK3 themes based on .Xresources  

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+options='-columns 4 -width 100 -lines 10 ' 
+
+selected=$(\
+  cat ~/documents/cheatsheets/vim_cheatsheet_markup \
+    | rofi -dmenu -i -markup-rows -p "vim bindings" -theme yanus\
+    ${options}
+    )
+
+# exit if nothing is selected
+[[ -z $selected ]] && exit
+
+echo -ne $(echo "$selected" |\
+  awk -F';' -v RS='>' '
+    NR==2{sub("&#x","",$1);print "\\u" $1;exit}'
+) |  xclip -selection clipboard
