@@ -2,19 +2,24 @@
 
 * window manager: i3-gaps
 * terminal: st
+* editor: vim
 * compositor: picom
 * status bar: polybar
 * application launcher: rofi
 * file manager: thunar
 * notification daemon: dunst + dunstify
+* browser: firefox
+* email: thunderbird
+* image viewer: sxiv
+* pdf viewer: zathura
 
-## TO DO
-Make a custom rofi menu to show vim keybindings for transitioning full time to vim    
+## TO DO    
 Make a custom rofi menu for clipping Font Awesome icons with rofi      
 Make a directory within .xres which has template layouts and color schemes for polybar and rofi  
-Scale down the interfaces of GTK applications like GIMP and Inkscape  
-Find a way to dynamically change GTK2 and GTK3 themes based on .Xresources  
+Scale down the interfaces of GTK applications like GIMP and Inkscape
 Configure appearance of dunst and dunstify  
+Find a way to dynamically change GTK2 and GTK3 themes based on .Xresources  
+Give Ranger NCurses file manager a try  
 
 Add following features to dunst:  
 * volume indicator
