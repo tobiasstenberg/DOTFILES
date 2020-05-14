@@ -1,0 +1,34 @@
+* {
+    background-color:       #3B4252;
+    border-color:           #3B4252;
+    text-color:             #839496;
+    font:                   "NotoSans 7";
+}
+
+#window {
+    location:               northwest;
+    anchor:                 northwest;
+    padding:                0;
+}
+
+#prompt {
+    height:                 35px;
+    background-color:       #4C566A;
+    padding:                2 20 8;
+} 
+
+#entry {
+    height:                 35px;
+    expand:                 false;
+    width:                  10em;
+    padding:                2 20 8;
+}
+
+#element {
+    padding:                2 20 8;
+}
+
+#element selected {
+    text-color:             #3B4252;
+    background-color:       #ebcb8b;
+}

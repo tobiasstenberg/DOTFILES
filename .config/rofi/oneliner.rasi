@@ -2,17 +2,17 @@
 @import "globals.rasi"
 
 * {
-    background-color:      @bgg2;
-    border-color:          @bgg2;
-    text-color:            @barfg;
-    font:                  @font1;
+    background-color:       @bgg2;
+    border-color:           @bgg2;
+    text-color:             @barfg;
+    font:                   @font1;
 }
 
 #window {
-    anchor:                 north;
-    location:               north;
-    width:                  1142;
-    height:                 35;
+    width:                  @width;
+    height:                 @height;
+    anchor:                 north west;
+    location:               north west;
     children:               [ horibox ];
     padding:                0;
 }
@@ -30,7 +30,7 @@
 
 #listview {
     layout:                 horizontal;
-    lines:                  5;
+    lines:                  10;
     spacing:                0;
     padding:                0;
 }
@@ -43,9 +43,17 @@
 }
 
 #element {
+    width: 250;
     padding:                2 20 8;
 }
+
 #element.selected {
     background-color:       @accent;
+    text-color:             @bgg2;
+}
+
+#element.active {
+    background-color:       @accent;
+    background:             "#00FF00";
     text-color:             @bgg2;
 }

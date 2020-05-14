@@ -143,13 +143,11 @@ bindsym $mod+r mode "resize"
 # BASIC BINDINGS #
 #----------------#
 
-# binding for testing purposes
-bindsym $mod+g exec --no-startup-id ~/scripts/vim_keybindings
-bindsym $mod+Shift+g exec --no-startup-id ~/scripts/vim_keybindings_markup
-
-# custom rofi menus
+# bindings for testing purposes
+# custom rofi menus to show keybindings for i3, vim and tridactyl for firefox!
 bindsym $mod+y exec --no-startup-id ~/scripts/i3keybindings
-bindsym $mod+Shift+y exec --no-startup-id ~/scripts/tridactyl_keybindings_markup
+bindsym $mod+g exec --no-startup-id ~/scripts/vim_keybindings_markup
+bindsym $mod+Shift+g exec --no-startup-id ~/scripts/tridactyl_keybindings_markup
 
 # polybar
 # exec polybar and set a new gap on the top
