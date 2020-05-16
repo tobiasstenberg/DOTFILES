@@ -1,7 +1,7 @@
 * {
-    background-color:       #3B4252;
-    border-color:           #3B4252;
-    text-color:             #839496;
+    background-color:       #1E252B;
+    border-color:           #656672;
+    text-color:             #656672;
     font:                   "NotoSans 7";
 }
 
@@ -13,7 +13,7 @@
 
 #prompt {
     height:                 35px;
-    background-color:       #4C566A;
+    background-color:       #1E252B;
     padding:                2 20 8;
 } 
 

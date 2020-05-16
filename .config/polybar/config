@@ -182,20 +182,20 @@ wrapping-scroll = false
 format-foreground = ${colors.barfg}
 format-background = ${colors.bgg3}
 
-label-mode-foreground = ${colors.barfg}
-label-mode-background = #a6ebcb8b
+label-mode-foreground = ${colors.barbg}
+label-mode-background = #99debcb8b
 label-mode-padding = ${paddings.inner}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = #a093A9CF
+label-focused-background = ${colors.barbg}
 label-focused-foreground = ${colors.barfg}
 label-focused-padding = ${paddings.inner}
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-background = #00000000
-label-unfocused-foreground = ${colors.bgg3}
+label-unfocused-background = ${colors.barbg}
+label-unfocused-foreground = ${colors.barfg}
 label-unfocused-padding = ${paddings.inner}
 
 ; visible = Active workspace on unfocused monitor
@@ -209,6 +209,9 @@ label-urgent = %index%
 label-urgent-background = ${colors.accent}
 label-urgent-foreground = ${colors.bgg5}
 label-urgent-padding = ${paddings.inner}
+
+label-focused-underline-color = #b6258f86
+label-focused-underline = #b6258f86
 
 ; Separator in between workspaces
 ; label-separator = |

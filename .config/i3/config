@@ -214,7 +214,7 @@ exec_always --no-startup-id xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_
 
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 
-exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/nord1.png
+exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/nord0.png
 
 exec_always --no-startup-id ~/scripts/launch_polybar_2
 
