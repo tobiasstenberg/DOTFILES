@@ -1,0 +1,44 @@
+#!/bin/bash
+
+function get_volume {
+		pacmd list-sinks|grep -A 15 '* index'| awk '/volume: front/{ print $5 }' | sed 's/[%|,]//g'
+}
+
+function is_mute {
+		state="$(pacmd list-sinks|grep -A 15 '* index'|awk '/muted:/{ print $2 }')"
+
+		if [[ "$state" =~ "yes" ]]; then
+			echo "0"
+			return 0
+		else
+			echo "1"
+			return 1
+		fi
+}
+
+function send_notification {
+		current_volume=`get_volume`
+    #	dunstify -r 4545 -u LOW "Vol: ${current_volume}%"
+}
+
+case $1 in
+		up)
+		if is_mute ; then
+		pactl set-sink-mute 1 toggle
+		else
+		pactl set-sink-volume 0 +5%
+		fi
+		send_notification
+		;;
+		down)
+		if is_mute ; then
+		pactl set-sink-mute 1 toggle
+		else
+		pactl set-sink-volume 0 -5%
+		fi
+		send_notification
+		;;
+		mute)
+		pactl set-sink-mute 0 toggle
+		;;
+esac

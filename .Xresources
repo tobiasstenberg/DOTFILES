@@ -29,14 +29,13 @@ Xcursor.size: 32
 ! FILE INCLUSIONS & COLORS SCHEMES !
 ! ---------------------------------!
 
-! #include ".xres/themes/dusty"
 ! #include ".xres/themes/solarized_dark_nord_bg_fg"
 ! #include ".xres/themes/nord"
 ! #include ".xres/themes/solarized_dark"
-
 ! #include ".xres/colors"
 
-#include ".xres/dusty_17"
+! not yet in the proper themes folder because it's a work in progress
+#include ".xres/dusty"
 
 ! files for specific programs can be loaded from separate files like this
 ! rofi support for xresources will soon be deprecated though and should move to ~/.config/rofi
@@ -61,19 +60,10 @@ rofi.yoffset: 0
 bar.paddinginner: 4.0
 bar.paddingouter: 10.0
 
+! leave barbg empty for transparent background
 ! bar.barbg: 
-! bar.barbg: #3B4252
-! bar.barbg: #2E3440
 bar.barbg: #1E252B
-
-! bar.barfg: #2E3440
-! bar.barfg: #839496
-! bar.barfg: #3B4352
-! bar.barfg: #3B4252
-! bar.barfg: #282d38
-! bar.barfg: #6d7b95
 bar.barfg: #60d8dee9
-
 
 bar.bgg1: #1E252B
 bar.bgg2: #1E252B
@@ -90,69 +80,13 @@ bar.bgg6: #1E252B
 !bar.bgg5: #fc5581CF
 !bar.bgg6: #5C6A82
 
-! blues to grey
-!bar.bgg1: #2E3440
-!bar.bgg2: #5C6A82
-!bar.bgg3: #a693A9CF
-!bar.bgg4: #a25581CF
-!bar.bgg5: #5581CF
-!bar.bgg6: #5C6A82
-
-! grey shit
-!bar.bgg1: #2E3440
-!bar.bgg2: #434C5E
-!bar.bgg3: #4C566A
-!bar.bgg4: #546076
-!bar.bgg5: #5C6A82
-!bar.bgg6: #5C6A82
-
-! coral and dark blue
-!bar.bgg1: #b4b48ead
-!bar.bgg2: #4C566A
-!bar.bgg3: #546076
-!bar.bgg4: #5C6A82
-!bar.bgg5: #b4bf616a
-!bar.bgg6: #b4d08770
-
-! coral, yellow, dark blue
-!bar.bgg1: #b4b48ead
-!bar.bgg2: #5C6A82
-!bar.bgg3: #a68fbcbb
-!bar.bgg4: #a2ebcb8b
-!bar.bgg5: #b4bf616a
-!bar.bgg6: #b4d08770
-
-! coral, yellow, purple and dark blue
-!bar.bgg1: #b4b48ead
-!bar.bgg2: #5C6A82
-!bar.bgg3: #b4b48ead
-!bar.bgg4: #a6ebcb8b
-!bar.bgg5: #b4bf616a
-!bar.bgg6: #b4d08770
-
-! dark blues
-!bar.bgg1: #2E3440
-!bar.bgg2: #3B4252
-!bar.bgg3: #434C5E
-!bar.bgg4: #4C566A
-!bar.bgg5: #546076 
-!bar.bgg6: #5C6A82
-
-! lighter blues
-!bar.bgg1: #2E3440
-!bar.bgg2: #434C5E
-!bar.bgg3: #4C566A
-!bar.bgg4: #546076
-!bar.bgg5: #5C6A82
-!bar.bgg6: #5C6A82
-
 ! ----------------------------!
 ! ADDITIONAL CUSTOM RESOURCES !
 ! ----------------------------!
 
 ! these additional custom resources could be in external files as well for easy switching
 
-excol.accent: #ebcb8b
+excol.accent: #deaf64
 excol.bg1: blk
 excol.bg2: bg
 excol.fg1: fg

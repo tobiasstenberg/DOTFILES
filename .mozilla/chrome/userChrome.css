@@ -1,6 +1,6 @@
 .tab-background[selected="true"] {
 	background-attachment: none!important;
-	background-color: #283145!important;
+	background-color: #252d3f!important;
 	background-image: none!important;
 	background-position: none!important;
 	background-repeat: none!important;
@@ -10,7 +10,7 @@
 toolbar, nav-bar > * {
 	border: none !important;
   	background-attachment: none!important;
-  	background-color: #283145!important;
+  	background-color: #252d3f!important;
   	background-image: none!important;
 	background-position: none!important;
 	background-repeat: none!important;

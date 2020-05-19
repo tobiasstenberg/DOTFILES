@@ -96,6 +96,7 @@ alias grep="grep --color=auto"
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
+alias yt='youtube-dl'					  # simple binding to download a vid from youtube
 
 xhost +local:root > /dev/null 2>&1
 
@@ -141,3 +142,19 @@ ex ()
 
 PATH="$HOME/scripts:$PATH"
 export PATH
+
+##-----------------------------------------------------
+## fancy-bash-prompt
+## Added by synth-shell
+## https://github.com/andresgongora/synth-shell/
+if [ -f /home/tobias/.config/synth-shell/fancy-bash-prompt.sh ]; then
+	source /home/tobias/.config/synth-shell/fancy-bash-prompt.sh
+fi
+
+##-----------------------------------------------------
+## better-ls
+## Added by synth-shell
+## https://github.com/andresgongora/synth-shell/
+if [ -f /home/tobias/.config/synth-shell/better-ls.sh ]; then
+	source /home/tobias/.config/synth-shell/better-ls.sh
+fi

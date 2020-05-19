@@ -1,0 +1,16 @@
+#!/bin/bash
+
+function send_notification {
+		current_backlight="$(xbacklight -get)"
+		echo ${current_backlight%%.*}
+		dunstify -r 5454 -u LOW "Backlight: ${current_backlight%%.*}%"
+}
+
+case $1 in
+		up)
+		xbacklight -inc 5
+		;;
+		down)
+		xbacklight -dec 5
+		;;
+esac

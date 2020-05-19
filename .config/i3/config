@@ -203,10 +203,10 @@ for_window [class="^.*"] border pixel 1
 #for_window [class=".*"] title_format "<span font='Hack 10'> > %title</span>"
 
 # class				border		background	text		indicator	child border
-client.focused          	#		#		#	 	#		#506070
-client.unfocused        	#		#		#		#		#14191d
-client.focused_inactive 	#		#		#		#		#14191d
-client.urgent           	#		#		#		#		#14191d
+client.focused          	#384461		#		#	 	#384461		#384461
+client.unfocused        	#252d3f		#		#		#252d3f   #252d3f
+client.focused_inactive 	#252d3f		#		#		#252d3f		#252d3f
+client.urgent           	#252d3f		#		#		#252d3f		#252d3f
 client.background 		#
 
 #----------------------#

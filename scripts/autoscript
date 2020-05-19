@@ -10,5 +10,5 @@ if [[ -f $SCRIPT_FILE ]]; then
 else
     echo '#!/bin/bash' > $SCRIPT_FILE
     chmod +x $SCRIPT_FILE
-    code $SCRIPT_FILE
+    st -e vim $SCRIPT_FILE
 fi
