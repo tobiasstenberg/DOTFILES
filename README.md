@@ -7,7 +7,7 @@
 * status bar: polybar
 * application launcher: rofi
 * file manager: thunar
-* mail program: neomutt  
+* mail: neomutt  
 * notification daemon: dunst + dunstify
 * browser: firefox
 * email: thunderbird
