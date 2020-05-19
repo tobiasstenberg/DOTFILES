@@ -7,6 +7,7 @@
 * status bar: polybar
 * application launcher: rofi
 * file manager: thunar
+* mail program: neomutt  
 * notification daemon: dunst + dunstify
 * browser: firefox
 * email: thunderbird
@@ -14,22 +15,10 @@
 * pdf viewer: zathura
 
 ## TO DO    
-Make a custom rofi menu for clipping Font Awesome icons with rofi      
-Make a directory within .xres which has template layouts and color schemes for polybar and rofi  
-Scale down the interfaces of GTK applications like GIMP and Inkscape
-Configure appearance of dunst and dunstify  
+Set the unfocused border in i3 by importing bg color from .Xresources  
+Scale down the interfaces of GTK applications like GIMP and Inkscape  
+Setup image previewing in ranger  
 Find a way to dynamically change GTK2 and GTK3 themes based on .Xresources  
-Give Ranger NCurses file manager a try  
-
-Add following features to dunst:  
-* volume indicator
-* brightness indicator
-* use dunst as general notification for when a long script has finished - a scraper for example
-
-Add following features to polybar:  
-* Pacman and AUR updates counter
-* Number of unread emails and clickable exec to thunderbird
-* Github notification counter and clickable link
 
 ## MacBook Pro specific settings
 
