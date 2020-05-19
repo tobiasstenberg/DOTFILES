@@ -106,7 +106,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=7;1"
 ;---------------------------------;
 
 modules-left = battery backlight volume i3 xwindow
-modules-right = wlan network cpu temperature memory filesystem time
+modules-right = updates-pacman-aurhelper mail wlan network cpu temperature memory filesystem time
 
 ;tray-background = #0063ff
 
@@ -133,6 +133,28 @@ type = internal/xwindow
 label = %title:0:30:...%
 label-padding = ${paddings.inner}
 label-background = ${colors.bgg2}
+
+;----------------------------------------------------------
+
+[module/mail]
+type = custom/script
+exec = ~/scripts/check_mail
+interval = 180
+label-padding-right = ${paddings.inner}
+label-background = ${colors.bgg2}
+format-prefix = "   "
+click-left = st -e neomutt &
+click-right = st -e neomutt &
+
+;----------------------------------------------------------
+
+[module/updates-pacman-aurhelper]
+type = custom/script
+exec = ~/scripts/updates_pacman_aurhelper
+interval = 600
+label-padding-right = ${paddings.inner}
+label-background = ${colors.bgg2}
+format-prefix = "   "
 
 ;----------------------------------------------------------
 
@@ -181,9 +203,10 @@ wrapping-scroll = false
 
 format-foreground = ${colors.barfg}
 format-background = ${colors.bgg3}
+format-padding-left = 20
 
 label-mode-foreground = ${colors.barbg}
-label-mode-background = #99debcb8b
+label-mode-background = #b0ebcb8b
 label-mode-padding = ${paddings.inner}
 
 ; focused = Active workspace on focused monitor
@@ -312,7 +335,7 @@ format-volume = <ramp-volume> <label-volume>
 format-muted =  0%
 
 format-volume-padding = ${paddings.inner}
-format-muted-padding-left = ${paddings.inner}
+format-muted-padding = ${paddings.inner}
 format-volume-background = ${colors.bgg3}
 format-muted-background = ${colors.bgg3}
 
@@ -388,6 +411,8 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
+ramp-capacity-0-foreground = #bf5963
+
 ;----------------------------------------------------------
 
 [module/backlight]
@@ -435,6 +460,8 @@ label-warn-foreground = ${colors.accent}
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
+
+ramp-2-foreground = #bf5963
 
 ramp-0-padding-left = ${paddings.inner}
 ramp-1-padding-left = ${paddings.inner}

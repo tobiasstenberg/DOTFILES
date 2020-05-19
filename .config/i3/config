@@ -146,6 +146,7 @@ bindsym $mod+r mode "resize"
 # bindings for testing purposes
 # custom rofi menus to show keybindings for i3, vim and tridactyl for firefox!
 bindsym $mod+y exec --no-startup-id ~/scripts/i3keybindings
+bindsym $mod+Shift+y exec --no-startup-id ~/scripts/check_volume
 bindsym $mod+g exec --no-startup-id ~/scripts/vim_keybindings_markup
 bindsym $mod+Shift+g exec --no-startup-id ~/scripts/tridactyl_keybindings_markup
 
@@ -161,8 +162,12 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/onelin
 # firefox
 bindsym $mod+e exec --no-startup-id firefox
 
-# thunar
-bindsym $mod+t exec --no-startup-id thunar
+# ranger
+bindsym $mod+t exec --no-startup-id st -e ranger 
+bindsym $mod+Shift+t exec --no-startup-id thunar
+
+# neomutt
+bindsym $mod+n exec --no-startup-id st -e neomutt
 
 # st
 bindsym $mod+Return exec --no-startup-id st
@@ -194,14 +199,14 @@ bindsym $mod+i gaps inner current set 10;       gaps inner current set 20
 #------------#
 
 # window border
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1 
 #for_window [class=".*"] title_format "<span font='Hack 10'> > %title</span>"
 
 # class				border		background	text		indicator	child border
-client.focused          	#		#		#	 	#		#268bd2
-client.unfocused        	#		#		#		#		#
-client.focused_inactive 	#		#		#		#		#
-client.urgent           	#		#		#		#		#
+client.focused          	#		#		#	 	#		#506070
+client.unfocused        	#		#		#		#		#14191d
+client.focused_inactive 	#		#		#		#		#14191d
+client.urgent           	#		#		#		#		#14191d
 client.background 		#
 
 #----------------------#
@@ -238,13 +243,13 @@ exec --no-startup-id picom
 #---------------#
 
 # audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/scripts/check_volume up
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/scripts/check_volume down
+bindsym XF86AudioMute exec --no-startup-id ~/scripts/check_volume mute
 
 # screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/scripts/check_backlight up 
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/scripts/check_backlight down 
 
 floating_maximum_size 1920 x 1080
 floating_minimum_size -1 x -1
