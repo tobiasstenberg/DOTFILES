@@ -6,7 +6,7 @@
 * compositor: picom
 * status bar: polybar
 * application launcher: rofi
-* file manager: thunar
+* file manager: ranger
 * mail: neomutt  
 * notification daemon: dunst + dunstify
 * browser: firefox
