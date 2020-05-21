@@ -15,7 +15,6 @@
 * pdf viewer: zathura
 
 ## TO DO    
-Force old GTK applications to use the dark theme variant  
 Set the unfocused border in i3 by importing bg color from .Xresources  
 Setup image previewing in ranger  
 Find a way to dynamically change GTK2 and GTK3 themes based on .Xresources  
