@@ -223,6 +223,8 @@ exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/nord0.png
 
 exec_always --no-startup-id ~/scripts/launch_polybar_2
 
+exec --no-startup-id xfsettingsd
+
 exec --no-startup-id picom
 
 # exec --no-startup-id dropbox
