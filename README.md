@@ -15,12 +15,18 @@
 * pdf viewer: zathura
 
 ## TO DO    
+Force old GTK applications to use the dark theme variant  
 Set the unfocused border in i3 by importing bg color from .Xresources  
-Scale down the interfaces of GTK applications like GIMP and Inkscape  
 Setup image previewing in ranger  
 Find a way to dynamically change GTK2 and GTK3 themes based on .Xresources  
 
 ## MacBook Pro specific settings
+
+#### line 185 in .config/i3/config:  
+
+`exec --no-startupid xfsettingsd`  
+
+Added the xf settings daemon to take advantage of xfce4-appearance settings which allows me to set a higher DPI for all GTK applications (which means they all scale properly now)  
 
 #### line 179 in .config/i3/config:  
 
