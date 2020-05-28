@@ -22,19 +22,15 @@ Xcursor.size: 32
 #define fntsz1 7
 #define fntsz2 14
 
-! its difficult to make general x settings for font sizes on a hidpi display
-!  since a lot of applications are scaled (see .profile)
-
 ! ---------------------------------!
 ! FILE INCLUSIONS & COLORS SCHEMES !
 ! ---------------------------------!
 
-! #include ".xres/themes/solarized_dark_nord_bg_fg"
 ! #include ".xres/themes/nord"
 ! #include ".xres/themes/solarized_dark"
 ! #include ".xres/colors"
-
-! not yet in the proper themes folder because it's a work in progress
+! #include ".xres/themes/kasugano"
+!
 #include ".xres/dusty"
 
 ! files for specific programs can be loaded from separate files like this
@@ -57,13 +53,13 @@ bar.offsety: 0
 rofi.xoffset: 0
 rofi.yoffset: 0
 
-bar.paddinginner: 4.0
+bar.paddinginner: 6.0
 bar.paddingouter: 10.0
 
 ! leave barbg empty for transparent background
 ! bar.barbg: 
 bar.barbg: #1E252B
-bar.barfg: #60d8dee9
+bar.barfg: #c98a919e
 
 bar.bgg1: #1E252B
 bar.bgg2: #1E252B
@@ -72,14 +68,6 @@ bar.bgg4: #1E252B
 bar.bgg5: #1E252B
 bar.bgg6: #1E252B
 
-! homemade blue grey cyan
-!bar.bgg1: #2E3440
-!bar.bgg2: #5C6A82
-!bar.bgg3: #b6258F86
-!bar.bgg4: #a25581CF
-!bar.bgg5: #fc5581CF
-!bar.bgg6: #5C6A82
-
 ! ----------------------------!
 ! ADDITIONAL CUSTOM RESOURCES !
 ! ----------------------------!
@@ -87,6 +75,7 @@ bar.bgg6: #1E252B
 ! these additional custom resources could be in external files as well for easy switching
 
 excol.accent: #deaf64
+excol.borderaccent: #384461
 excol.bg1: blk
 excol.bg2: bg
 excol.fg1: fg

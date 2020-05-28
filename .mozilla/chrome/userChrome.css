@@ -1,6 +1,6 @@
 .tab-background[selected="true"] {
 	background-attachment: none!important;
-	background-color: #252d3f!important;
+	background-color: #202631!important;
 	background-image: none!important;
 	background-position: none!important;
 	background-repeat: none!important;
@@ -9,18 +9,18 @@
 
 toolbar, nav-bar > * {
 	border: none !important;
-  	background-attachment: none!important;
-  	background-color: #252d3f!important;
-  	background-image: none!important;
+ 	background-attachment: none!important;
+ 	background-color: #202631!important;
+ 	background-image: none!important;
 	background-position: none!important;
 	background-repeat: none!important;
 	background-size: none!important;
 }
 
 #nav-bar {
-    background: transparent !important; 
-    border: none !important;
-    box-shadow: none !important;
+  background: transparent !important; 
+  border: none !important;
+  box-shadow: none !important;
 	margin-top: -1px !important; border-top-width: -1px !important;
 	margin-bottom: -1px !important; border-bottom-width: -1px !important;
 }

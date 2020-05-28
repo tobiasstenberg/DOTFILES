@@ -95,7 +95,7 @@ tray-detached = true
 ; FONTS ;
 ;-------;
 
-font-0 = Noto Sans:pixelsize=7;1
+font-0 = Noto Sans Medium:pixelsize=7;1
 font-1 = Unifont:fontformat=truetype:size=7:antialias=false;0
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;1"
 font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;1"
@@ -206,7 +206,7 @@ format-background = ${colors.bgg3}
 format-padding-left = 20
 
 label-mode-foreground = ${colors.barbg}
-label-mode-background = #b0ebcb8b
+label-mode-background = ${colors.accent}
 label-mode-padding = ${paddings.inner}
 
 ; focused = Active workspace on focused monitor
@@ -233,8 +233,8 @@ label-urgent-background = ${colors.accent}
 label-urgent-foreground = ${colors.bgg5}
 label-urgent-padding = ${paddings.inner}
 
-label-focused-underline-color = #b6258f86
-label-focused-underline = #b6258f86
+label-focused-underline-color = #b6b1426d
+label-focused-underline = #b6b1426d
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -290,7 +290,7 @@ label-background = ${colors.bgg3}
 
 [module/memory]
 type = internal/memory
-label =  %gb_used%
+label =  %gb_used%
 label-padding = ${paddings.inner}
 label-background = ${colors.bgg4}
 
