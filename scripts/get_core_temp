@@ -1,0 +1,14 @@
+#!/bin/bash
+
+case $1 in
+
+  temp)
+    sensors | awk '/^Package/ {print substr($4,2,2);}'
+  ;;
+
+  coretemp)
+    sensors | awk '/^Core 0:/ {print substr($3,2,2);} /^Core 1:/ {print substr($3,2,2);} /^Core 2:/ {print substr($3,2,2);} /^Core 3:/ {print substr($3,2,2);}' 
+  ;;
+
+esac
+
