@@ -53,7 +53,7 @@ bar.offsety: 0
 rofi.xoffset: 0
 rofi.yoffset: 0
 
-bar.paddinginner: 6.0
+bar.paddinginner: 5.0
 bar.paddingouter: 10.0
 
 ! leave barbg empty for transparent background

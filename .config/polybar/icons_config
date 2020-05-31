@@ -106,7 +106,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=7;1"
 ;---------------------------------;
 
 modules-left = battery backlight volume i3 xwindow
-modules-right = updates-pacman-aurhelper mail wlan network cpu_hogs cpu core_temp temperature fanspeed ram filesystem time powermenu
+modules-right = updates-pacman-aurhelper mail wlan network cpu temperature memory filesystem time
 
 ;tray-background = #0063ff
 
@@ -142,8 +142,7 @@ exec = ~/scripts/check_mail
 interval = 180
 label-padding-right = ${paddings.inner}
 label-background = ${colors.bgg2}
-format-prefix = " mail:  "
-format-padding= ${paddings.inner}
+format-prefix = "   "
 click-left = st -e neomutt &
 click-right = st -e neomutt &
 
@@ -155,18 +154,7 @@ exec = ~/scripts/updates_pacman_aurhelper
 interval = 600
 label-padding-right = ${paddings.inner}
 label-background = ${colors.bgg2}
-format-prefix = " updates:  "
-
-;----------------------------------------------------------
-
-[module/fanspeed]
-type = custom/script
-exec = ~/scripts/get_fans_speed
-interval = 10
-;label-padding-right = ${paddings.inner}
-label-background = ${colors.bgg2}
-format-prefix = " fans: "
-format-padding= ${paddings.inner}
+format-prefix = "   "
 
 ;----------------------------------------------------------
 
@@ -292,36 +280,19 @@ card = intel_backlight
 
 ;----------------------------------------------------------
 
-[module/cpu_hogs]
-type = custom/text
-content = "       cpu: "
-click-left = dunstify -r 767 -u LOW -t 10000 "CPU HOGS:                       $(ps axch -o cmd:25,%cpu --sort=-%cpu | head)"
-
-;----------------------------------------------------------
-
 [module/cpu]
 type = internal/cpu
-label = %percentage%%
-label-padding-right = ${paddings.inner}
+label =  %percentage%%
+label-padding = ${paddings.inner}
 label-background = ${colors.bgg3}
 
 ;----------------------------------------------------------
 
 [module/memory]
 type = internal/memory
-label = mem: %gb_used%
+label =  %gb_used%
 label-padding = ${paddings.inner}
 label-background = ${colors.bgg4}
-
-;----------------------------------------------------------
-
-[module/ram]
-type = custom/script
-exec = ~/scripts/get_mem
-interval = 15
-format-prefix = "mem: "
-format-padding = ${paddings.inner}
-click-left = dunstify -r 676 -u LOW -t 10000 "      MEM HOGS:                       $(ps axch -o cmd:25,%mem --sort=-%mem | head)"
 
 ;----------------------------------------------------------
 
@@ -330,38 +301,21 @@ type = internal/network
 interface = wlp2s0
 interval = 5
 
-label-connected = wlan: %essid%
-label-disconnected = wlan: DISCONNECTED
-label-connected-padding-right = 1
+label-connected =  %essid%
+label-disconnected =  Not Connected
+label-connected-padding = ${paddings.inner}
 label-disconnected-padding = ${paddings.inner}
 label-connected-background = ${colors.bgg2}
 label-disconnected-background = ${colors.bgg2}
 
 ;----------------------------------------------------------
 
-[module/network_rssi]
-type = custom/script
-exec= sudo -i ~/scripts/get_wifi_signal_strength
-interval = 5
-
-;----------------------------------------------------------
-
 [module/network]
 type = internal/network
 interface = wlp2s0
-format-connected = | <ramp-signal> | <label-connected>
-label-connected = %downspeed% / %upspeed%
-label-connected-padding-right = ${paddings.inner}
+label-connected =  %downspeed% |  %upspeed%
+label-connected-padding = ${paddings.inner}
 label-connected-background = ${colors.bgg2}
-
-ramp-signal-0 = none
-ramp-signal-1 = low
-ramp-signal-2 = low
-ramp-signal-3 = medium
-ramp-signal-4 = medium
-ramp-signal-5 = good
-ramp-signal-6 = good
-ramp-signal-7 = very good
 
 ;----------------------------------------------------------
 
@@ -378,17 +332,16 @@ format-background = ${colors.bgg5}
 [module/volume]
 type = internal/volume
 format-volume = <ramp-volume> <label-volume>
-format-muted = vol: MUTED
+format-muted =  0%
 
 format-volume-padding = ${paddings.inner}
 format-muted-padding = ${paddings.inner}
 format-volume-background = ${colors.bgg3}
 format-muted-background = ${colors.bgg3}
-;format-muted-foreground= ${colors.color4}
 
-ramp-volume-0 = vol:
-ramp-volume-1 = vol:
-ramp-volume-2 = vol:
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 ;----------------------------------------------------------
 
@@ -452,11 +405,11 @@ ramp-capacity-2-padding-left = ${paddings.inner}
 ramp-capacity-3-padding-left = ${paddings.inner}
 ramp-capacity-4-padding-left = ${paddings.inner}
 
-ramp-capacity-0 = batt:
-ramp-capacity-1 = batt:
-ramp-capacity-2 = batt:
-ramp-capacity-3 = batt:
-ramp-capacity-4 = batt:
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
 ramp-capacity-0-foreground = #bf5963
 
@@ -478,43 +431,13 @@ label-padding-right = ${paddings.inner}
 label-background = ${colors.bgg4}
 format-background = ${colors.bgg4}
 
-ramp-0 = light:
-ramp-1 = light:
-ramp-2 = light:
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
 ramp-0-padding-left = ${paddings.inner}
 ramp-1-padding-left = ${paddings.inner}
 ramp-2-padding-left = ${paddings.inner}
-
-;----------------------------------------------------------
-
-[module/core_temp]
-type = internal/temperature
-thermal-zone = 1
-warn-temperature = 84
-
-label-padding-right = ${paddings.inner}
-label-background = ${colors.bgg3}
-format-background = ${colors.bgg3}
-
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.accent}
-
-ramp-0 = core temp:
-ramp-1 = core temp:
-ramp-2 = core temp:
-ramp-3 = core temp:
-
-ramp-3-foreground = ${colors.color9}
-
-ramp-0-padding-left = ${paddings.inner}
-ramp-1-padding-left = ${paddings.inner}
-ramp-2-padding-left = ${paddings.inner}
-ramp-3-padding-left = ${paddings.inner}
 
 ;----------------------------------------------------------
 
@@ -534,9 +457,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.accent}
 
-ramp-0 = temp:
-ramp-1 = temp:
-ramp-2 = temp:
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
 ramp-2-foreground = #bf5963
 
@@ -548,31 +471,30 @@ ramp-2-padding-left = ${paddings.inner}
 
 [module/powermenu]
 type = custom/menu
-expand-right = false
+expand-right = true
 format-spacing = 1
-format-padding= ${paddings.inner}
 
-label-open = X
-label-close = X
-;label-separator = /
-label-close-foreground = ${colors.color1}
-label-close-padding-left = ${paddings.inner}
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close =  cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = exit i3
-menu-0-0-exec = i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'
-menu-0-0-foreground = ${colors.color2}
-menu-0-0-padding = ${paddings.inner}
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
 
-menu-0-1 = reboot
-menu-0-1-exec = reboot
-menu-0-1-foreground = ${colors.color3}
-menu-0-1-padding = ${paddings.inner}
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
 
-menu-0-2 = power off
-menu-0-2-exec = shutdown now
-menu-0-2-foreground = ${colors.color9}
-menu-0-2-padding = ${paddings.inner}
-
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
 
 ;----------------------------------------------------------
 

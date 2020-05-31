@@ -15,8 +15,9 @@
 * pdf viewer: zathura
 
 ## TO DO    
-Setup image previewing in ranger  
-Find a way to dynamically change GTK2 and GTK3 themes based on .Xresources  
+Install and configure newsboat  
+Make cronjob and polybar module for newsboat  
+Setup PDF previewing in ranger  
 
 ## MacBook Pro specific settings
 
