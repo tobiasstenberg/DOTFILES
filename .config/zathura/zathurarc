@@ -1,0 +1,5 @@
+set default-bg "#202631"
+set default-fg "#8a919e"
+set statusbar-fg "#202631"
+set statusbar-bg "#8a919e"
+set font "monospace normal 10"

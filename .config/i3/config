@@ -8,7 +8,8 @@ set $mod Mod4
 # font
 font pango:Hack 14
 
-# xrdb -query | grep bar.paddinginner | awk '{print $2}'
+set_from_resource $bgborder color8 #000000
+set_from_resource $focusborder excol.borderaccent #FFFFFF
 
 #-----------------------------#
 # WINDOW / WORKSPACE COMMANDS #
@@ -203,10 +204,10 @@ for_window [class="^.*"] border pixel 1
 #for_window [class=".*"] title_format "<span font='Hack 10'> > %title</span>"
 
 # class				border		background	text		indicator	child border
-client.focused          	#384461		#		#	 	#384461		#384461
-client.unfocused        	#252d3f		#		#		#252d3f   #252d3f
-client.focused_inactive 	#252d3f		#		#		#252d3f		#252d3f
-client.urgent           	#252d3f		#		#		#252d3f		#252d3f
+client.focused          	$focusborder		#		#	 	$focusborder		$focusborder
+client.unfocused        	$bgborder		#		#		$bgborder   $bgborder
+client.focused_inactive 	$bgborder		#		#		$bgborder		$bgborder
+client.urgent           	$bgborder		#		#		$bgborder		$bgborder
 client.background 		#
 
 #----------------------#
@@ -217,13 +218,13 @@ exec_always --no-startup-id xrandr --dpi 192
 
 exec_always --no-startup-id xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 32
 
+exec --no-startup-id xfsettingsd
+
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 
-exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/nord0.png
+exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/282D38.png
 
 exec_always --no-startup-id ~/scripts/launch_polybar_2
-
-exec --no-startup-id xfsettingsd
 
 exec --no-startup-id picom
 
