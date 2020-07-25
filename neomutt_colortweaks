@@ -1,0 +1,8 @@
+color status brightblue default
+color message default default
+color indicator brightblack brightblue
+color sidebar_flagged brightred brightblack
+color sidebar_highlight brightblack brightyellow
+color sidebar_divider brightblack default
+set sidebar_visible = true
+
