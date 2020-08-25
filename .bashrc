@@ -141,7 +141,12 @@ ex ()
 }
 
 PATH="$HOME/scripts:$PATH"
+PATH="$HOME/.node_modules/bin:$PATH"
+PATH="$HOME/.pyenv/bin:$PATH"
 export PATH
+export npm_config_prefix=~/.node_modules
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 ##-----------------------------------------------------
 ## fancy-bash-prompt
