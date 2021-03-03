@@ -1,0 +1,23 @@
+* {
+accent: #ebcb8b;
+bg1: #1E252B;
+bg2: #1E252B;
+fg1: #656672;
+fg2: #656672;
+redish: red;
+width: 2880;
+height: 35;
+offsetx: 0;
+offsety: 0;
+paddinginner: 4.0;
+paddingouter: 10.0;
+barbg: #000000;
+barfg: #656672;
+bgg1: #1E252B;
+bgg2: #1E252B;
+bgg3: #1E252B;
+bgg4: #1E252B;
+bgg5: #1E252B;
+bgg6: #1E252B;
+font1: "NotoSans 7";
+}

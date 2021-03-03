@@ -1,9 +1,8 @@
 * {
-accent: #ebcb8b;
-bg1: #1E252B;
-bg2: #1E252B;
-fg1: #656672;
-fg2: #656672;
+accent: #f0c674;
+bg2: #151A1E;
+fg1: #6e777e;
+fg2: #6e777e;
 redish: red;
 width: 2880;
 height: 35;
@@ -12,12 +11,12 @@ offsety: 0;
 paddinginner: 4.0;
 paddingouter: 10.0;
 barbg: #000000;
-barfg: #656672;
-bgg1: #1E252B;
-bgg2: #1E252B;
-bgg3: #1E252B;
-bgg4: #1E252B;
-bgg5: #1E252B;
-bgg6: #1E252B;
-font1: "NotoSans 7";
+barfg: #6e777e;
+bgg1: #151A1E;
+bgg2: #151A1E;
+bgg3: #151A1E;
+bgg4: #151A1E;
+bgg5: #151A1E;
+bgg6: #151A1E;
+font1: "NotoSans 6";
 }

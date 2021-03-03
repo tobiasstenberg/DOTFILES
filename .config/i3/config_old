@@ -5,14 +5,10 @@
 # mod
 set $mod Mod4
 
-# set monitors
-set $monitor_left eDP1
-set $monitor_right DP2
-
 # font
 font pango:Hack 14
 
-set_from_resource $bgborder excol.border #000000
+set_from_resource $bgborder color8 #000000
 set_from_resource $focusborder excol.borderaccent #FFFFFF
 
 #-----------------------------#
@@ -89,18 +85,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# setting ODD workspaces to primary and EVEN to secondary
-workspace $ws1 output $monitor_left
-workspace $ws2 output $monitor_righ t
-workspace $ws3 output $monitor_left
-workspace $ws4 output $monitor_right
-workspace $ws5 output $monitor_left
-workspace $ws6 output $monitor_right
-workspace $ws7 output $monitor_left
-workspace $ws8 output $monitor_right
-workspace $ws9 output $monitor_left
-workspace $ws10 output $monitor_right
-
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -169,12 +153,12 @@ bindsym $mod+Shift+g exec --no-startup-id ~/scripts/tridactyl_keybindings_markup
 
 # polybar
 # exec polybar and set a new gap on the top
-bindsym $mod+p exec --no-startup-id ~/scripts/launch_polybar_3; gaps top all set 16;
+bindsym $mod+p exec --no-startup-id ~/scripts/launch_polybar_2; gaps top all set 16;
 # kill polybar and set the top gap to the same as bottom gap
 bindsym $mod+Shift+p exec --no-startup-id killall -q polybar; gaps top all set -16
 
 # rofi
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/oneliner.rasi 
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/oneliner.rasi
 
 # firefox
 bindsym $mod+e exec --no-startup-id firefox
@@ -219,9 +203,9 @@ bindsym $mod+i gaps inner current set 10;       gaps inner current set 20
 for_window [class="^.*"] border pixel 1 
 #for_window [class=".*"] title_format "<span font='Hack 10'> > %title</span>"
 
-# class				border		        background	text		indicator	        child border
+# class				border		background	text		indicator	child border
 client.focused          	$focusborder		#		#	 	$focusborder		$focusborder
-client.unfocused        	$bgborder		#		#		$bgborder               $bgborder
+client.unfocused        	$bgborder		#		#		$bgborder   $bgborder
 client.focused_inactive 	$bgborder		#		#		$bgborder		$bgborder
 client.urgent           	$bgborder		#		#		$bgborder		$bgborder
 client.background 		#
@@ -230,9 +214,7 @@ client.background 		#
 # STARTUP APPLICATIONS #
 #----------------------#
 
-# exec_always --no-startup-id xrandr --dpi 192
-
-exec_always --no-startup-id  ~/scripts/launch_dual_monitor_2
+exec_always --no-startup-id xrandr --dpi 192
 
 exec_always --no-startup-id xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 32
 
@@ -240,11 +222,9 @@ exec --no-startup-id xfsettingsd
 
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 
-exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/202631.png
+exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/282D38.png
 
-# exec_always --no-startup-id ~/scripts/launch_polybar_2
-
-exec_always --no-startup-id ~/scripts/launch_polybar_3
+exec_always --no-startup-id ~/scripts/launch_polybar_2
 
 exec --no-startup-id picom
 

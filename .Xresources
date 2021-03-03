@@ -30,8 +30,8 @@ Xcursor.size: 32
 ! #include ".xres/themes/solarized_dark"
 ! #include ".xres/colors"
 ! #include ".xres/themes/kasugano"
-!
-#include ".xres/dusty"
+! 
+#include ".xres/wip"
 
 ! files for specific programs can be loaded from separate files like this
 ! rofi support for xresources will soon be deprecated though and should move to ~/.config/rofi
@@ -58,15 +58,15 @@ bar.paddingouter: 10.0
 
 ! leave barbg empty for transparent background
 ! bar.barbg: 
-bar.barbg: #1E252B
-bar.barfg: #c98a919e
+bar.barbg: #151A1E
+bar.barfg: #A7A7A7
 
-bar.bgg1: #1E252B
-bar.bgg2: #1E252B
-bar.bgg3: #1E252B
-bar.bgg4: #1E252B
-bar.bgg5: #1E252B
-bar.bgg6: #1E252B
+bar.bgg1: #151A1E
+bar.bgg2: #151A1E
+bar.bgg3: #151A1E
+bar.bgg4: #151A1E
+bar.bgg5: #151A1E
+bar.bgg6: #151A1E
 
 ! ----------------------------!
 ! ADDITIONAL CUSTOM RESOURCES !
@@ -75,7 +75,9 @@ bar.bgg6: #1E252B
 ! these additional custom resources could be in external files as well for easy switching
 
 excol.accent: #deaf64
+excol.border: #1a1d26
 excol.borderaccent: #384461
+! excol.borderaccent: #506070
 excol.bg1: blk
 excol.bg2: bg
 excol.fg1: fg
