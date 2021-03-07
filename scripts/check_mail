@@ -2,7 +2,7 @@
 
 # finds the nuber of emails stored locally in my inbox with offline imap email account
 
-if ! new_mails=$(du -a ~/.local/share/mail/tobias/INBOX/new/* 2>/dev/null | wc -l); then
+if ! new_mails=$(du -a ~/.local/share/mail/tobias.st.chr\@gmail.com/INBOX/new/* 2>/dev/null | wc -l); then
 		new_mails=0
 fi
 
