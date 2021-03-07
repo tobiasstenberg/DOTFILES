@@ -73,7 +73,7 @@ background = ${colors.barbg}
 foreground = ${colors.barfg}
 
 radius = 0.0
-fixed-center = false
+fixed-center = true
 module-margin-top = 20.0
 
 line-size = 3
@@ -108,12 +108,10 @@ line-color = #f00
 tray-position = none
 tray-detached = true
 
-modules-left = battery backlight volume i3
-modules-center= i3
-modules-right = updates-pacman-aurhelper mail wlan vpnstatus network cpu_hogs cpu core_temp temperature ram filesystem time powermenu
+modules-left = battery backlight volume i3 xwindow
+modules-right = updates-pacman-aurhelper mail wlan vpnstatus network cpu_hogs cpu core_temp temperature fanspeed ram filesystem time powermenu
 
-;font-0 = Noto Sans Medium:pixelsize=7;1
-font-0 = Hack:pixelsize=7;1
+font-0 = Noto Sans Medium:pixelsize=7;1
 font-1 = Unifont:fontformat=truetype:size=7:antialias=false;0
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;1"
 font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;1"
@@ -148,7 +146,7 @@ tray-detached = true
 ; FONTS ;
 ;-------;
 
-font-0 = Hack:pixelsize=7;1
+font-0 = Noto Sans Medium:pixelsize=7;1
 font-1 = Unifont:fontformat=truetype:size=7:antialias=false;0
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;1"
 font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;1"
@@ -158,17 +156,10 @@ font-4 = "Font Awesome 5 Brands:pixelsize=7;1"
 ; MODULE ALIGNMENT ADN WM OPTIONS ;
 ;---------------------------------;
 
-modules-left = i3 battery backlight volume
-modules-center = 
-;modules-right = updates-pacman-aurhelper mail wlan vpnstatus network cpu_hogs cpu core_temp temperature ram filesystem time powermenu
-modules-right =  updates-pacman-aurhelper mail wlan vpnstatus cpu_hogs cpu core_temp ram filesystem time powermenu
+modules-left = battery backlight volume i3 xwindow
+modules-right = updates-pacman-aurhelper mail wlan vpnstatus network cpu_hogs cpu core_temp temperature fanspeed ram filesystem time powermenu
 
 ;tray-background = #0063ff
-
-;separator = "|"
-
-;border-left-size = ${paddings.outer}
-;border-color = ${colors.bgg2}
 
 wm-restack = i3
 
@@ -213,7 +204,7 @@ exec = ~/scripts/updates_pacman_aurhelper
 interval = 600
 label-padding-right = ${paddings.inner}
 label-background = ${colors.bgg2}
-format-prefix = " updates: "
+format-prefix = " updates:  "
 ;format-prefix = "   "
 format-padding = ${paddings.inner}
 
@@ -289,7 +280,7 @@ label-focused-padding = ${paddings.inner}
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-background = ${colors.bgg2}
+label-unfocused-background = ${colors.barbg}
 label-unfocused-foreground = ${colors.barfg}
 label-unfocused-padding = ${paddings.inner}
 
@@ -306,7 +297,7 @@ label-urgent-foreground = ${colors.bgg5}
 label-urgent-padding = ${paddings.inner}
 
 label-focused-underline-color = #a54253
-label-focused-underline = #e16571
+label-focused-underline = #a54253
 
 ;label-focused-underline-color = #b6258f86
 ;label-focused-underline = #b6258f86
@@ -357,7 +348,7 @@ card = intel_backlight
 
 [module/cpu_hogs]
 type = custom/text
-content = "   cpu: "
+content = "       cpu: "
 ;content = "       "
 click-left = dunstify -r 767 -u LOW -t 10000 "CPU HOGS:                       $(ps axch -o cmd:25,%cpu --sort=-%cpu | head)"
 
@@ -365,9 +356,9 @@ click-left = dunstify -r 767 -u LOW -t 10000 "CPU HOGS:                       $(
 
 [module/cpu]
 type = internal/cpu
-label = %percentage:2%% / 
+label = %percentage%%
 ;label =  %percentage%%
-label-padding-right = 1.7
+label-padding-right = ${paddings.inner}
 label-background = ${colors.bgg3}
 
 ;----------------------------------------------------------
@@ -403,10 +394,8 @@ type = internal/network
 interface = wlp2s0
 interval = 5
 
-label-connected = wlan: %essid%
+label-connected = wlan: %essid% |
 label-disconnected = wlan: DISCONNECTED
-;label-connected = %essid%
-;label-disconnected = DISCONNECTED
 ;label-connected =  %essid%
 ;label-disconnected =  disconnected
 label-connected-padding-right = 1
@@ -427,8 +416,8 @@ label-padding-left= 1
 [module/network]
 type = internal/network
 interface = wlp2s0
-format-connected =  | <ramp-signal> <label-connected>
-label-connected = %downspeed:7% / %upspeed:7%
+format-connected =  | <ramp-signal> | <label-connected>
+label-connected = %downspeed% / %upspeed%
 ;label-connected =  %downspeed% |  %upspeed%
 label-connected-padding-right = ${paddings.inner}
 label-connected-background = ${colors.bgg2}
@@ -549,7 +538,7 @@ ramp-capacity-4 = batt:
 ;ramp-capacity-3 = 
 ;ramp-capacity-4 = 
 
-ramp-capacity-0-foreground = #e16571
+ramp-capacity-0-foreground = #bf5963
 
 ;----------------------------------------------------------
 
@@ -592,17 +581,17 @@ label-padding-right = ${paddings.inner}
 label-background = ${colors.bgg3}
 format-background = ${colors.bgg3}
 
-format = <label>
+format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.accent}
 
-ramp-0 = temp:
-ramp-1 = temp:
-ramp-2 = temp:
-ramp-3 = temp:
+ramp-0 = c temp:
+ramp-1 = c temp:
+ramp-2 = c temp:
+ramp-3 = c temp:
 
 ;ramp-0 = 
 ;ramp-1 = 
@@ -611,10 +600,10 @@ ramp-3 = temp:
 
 ;ramp-3-foreground = ${colors.color9}
 
-;ramp-0-padding-left = ${paddings.inner}
-;ramp-1-padding-left = ${paddings.inner}
-;ramp-2-padding-left = ${paddings.inner}
-;ramp-3-padding-left = ${paddings.inner}
+ramp-0-padding-left = ${paddings.inner}
+ramp-1-padding-left = ${paddings.inner}
+ramp-2-padding-left = ${paddings.inner}
+ramp-3-padding-left = ${paddings.inner}
 
 ;----------------------------------------------------------
 
@@ -650,38 +639,13 @@ ramp-2-padding-left = ${paddings.inner}
 
 ;----------------------------------------------------------
 
-[module/testmenu]
-type = custom/menu
-expand-right = false
-format-spacing = 1
-format-padding= ${paddings.inner}
-
-label-open = 
-label-close = X
-;label-separator = /
-label-close-foreground = ${colors.color1}
-label-close-padding-left = ${paddings.inner}
-
-menu-0-0 = test
-menu-0-0-exec = ls
-menu-0-0-foreground = ${colors.color2}
-menu-0-0-padding = ${paddings.inner}
-
-menu-0-1 = TEST
-menu-0-1-exec = ls
-menu-0-1-foreground = ${colors.color3}
-menu-0-1-padding = ${paddings.inner}
-
-
-;----------------------------------------------------------
-
 [module/powermenu]
 type = custom/menu
 expand-right = false
 format-spacing = 1
 format-padding= ${paddings.inner}
 
-label-open = 
+label-open = X
 label-close = X
 ;label-separator = /
 label-close-foreground = ${colors.color1}
