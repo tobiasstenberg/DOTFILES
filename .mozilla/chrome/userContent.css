@@ -2,28 +2,28 @@
   html:not(#ublock0-epicker),
   html:not(#ublock0-epicker) body,
   #newtab-customize-overlay {
-    background: #202631 !important;
+    background: #1a1d26 !important;
   }
 }
 
 :root.theme-dark {
-  --theme-body-background: #202631 !important;
-  --theme-sidebar-background: #202631 !important;
-  --theme-tab-toolbar-background: #202631 !important;
-  --theme-toolbar-background: #202631 !important;
-  --theme-selection-background: #258f86 !important;
-  --theme-selection-color: #202631 !important;
-  --theme-body-color: #8a919e !important;
-  --theme-body-color-alt: #8a919e !important;
-  --theme-content-color1: #8a919e !important;
-  --theme-content-color2: #8a919e !important;
-  --theme-content-color3: #8a919e !important;
-  --theme-highlight-green: #8bf9a6 !important;
-  --theme-highlight-blue: #81a2be !important;
-  --theme-highlight-bluegrey: #5f819d !important;
-  --theme-highlight-light-orange: #deaf64 !important;
+  --theme-body-background: #1a1d26 !important;
+  --theme-sidebar-background: #1a1d26 !important;
+  --theme-tab-toolbar-background: #1a1d26 !important;
+  --theme-toolbar-background: #1a1d26 !important;
+  --theme-selection-background: #c5c5c8 !important;
+  --theme-selection-color: #1a1d26 !important;
+  --theme-body-color: #c5c5c8 !important;
+  --theme-body-color-alt: #c5c5c8 !important;
+  --theme-content-color1: #c5c5c8 !important;
+  --theme-content-color2: #c5c5c8 !important;
+  --theme-content-color3: #c5c5c8 !important;
+  --theme-highlight-green: #9cbd68 !important;
+  --theme-highlight-blue: #5a9191 !important;
+  --theme-highlight-bluegrey: #71bdb2 !important;
+  --theme-highlight-light-orange: #f0c674 !important;
   --theme-highlight-orange: #de935f !important;
-  --theme-highlight-red: #bf5963 !important;
-  --theme-highlight-pink: #b1426d !important;
-  --theme-highlight-purple: #b482ab !important;
+  --theme-highlight-red: #a54253 !important;
+  --theme-highlight-pink: #e16571 !important;
+  --theme-highlight-purple: #b57faa !important;
 }
