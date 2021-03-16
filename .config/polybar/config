@@ -82,14 +82,16 @@ line-color = #f00
 tray-position = none
 tray-detached = true
 
-modules-left = volume i3 xwindow
-modules-right = time powermenu
+modules-left = i3 battery backlight volume
+;modules-right = time powermenu
+modules-right =  updates-pacman-aurhelper mail wlan vpnstatus cpu_hogs cpu core_temp ram filesystem time powermenu
 
-font-0 = Noto Sans Medium:pixelsize=7;1
-font-1 = Unifont:fontformat=truetype:size=7:antialias=false;0
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;1"
-font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=7;1"
+;font-0 = Noto Sans Medium:pixelsize=7;1
+font-0 = Hack:pixelsize=7;3
+font-1 = Unifont:fontformat=truetype:size=7:antialias=false;3
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;3"
+font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;"
+font-4 = "Font Awesome 5 Brands:pixelsize=7;3"
 
 [bar/top_external]
 monitor = HDMI3
@@ -108,16 +110,17 @@ line-color = #f00
 tray-position = none
 tray-detached = true
 
-modules-left = battery backlight volume i3
-modules-center= i3
-modules-right = updates-pacman-aurhelper mail wlan vpnstatus network cpu_hogs cpu core_temp temperature ram filesystem time powermenu
+modules-left = i3 battery backlight volume
+modules-center = 
+;modules-right = updates-pacman-aurhelper mail wlan vpnstatus network cpu_hogs cpu core_temp temperature ram filesystem time powermenu
+modules-right =  updates-pacman-aurhelper mail wlan vpnstatus cpu_hogs cpu core_temp ram filesystem time powermenu
 
 ;font-0 = Noto Sans Medium:pixelsize=7;1
-font-0 = Hack:pixelsize=7;1
-font-1 = Unifont:fontformat=truetype:size=7:antialias=false;0
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;1"
-font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=7;1"
+font-0 = Hack:pixelsize=7;3
+font-1 = Unifont:fontformat=truetype:size=7:antialias=false;3
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;3"
+font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;3"
+font-4 = "Font Awesome 5 Brands:pixelsize=7;3"
 
 [bar/top]
 monitor = eDP1
@@ -148,11 +151,11 @@ tray-detached = true
 ; FONTS ;
 ;-------;
 
-font-0 = Hack:pixelsize=7;1
-font-1 = Unifont:fontformat=truetype:size=7:antialias=false;0
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;1"
-font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=7;1"
+font-0 = Hack:pixelsize=7;3
+font-1 = Unifont:fontformat=truetype:size=7:antialias=false;3
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=7;3"
+font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=7;3"
+font-4 = "Font Awesome 5 Brands:pixelsize=7;3"
 
 ;---------------------------------;
 ; MODULE ALIGNMENT ADN WM OPTIONS ;
@@ -283,8 +286,8 @@ label-mode-padding = ${paddings.inner}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.barbg}
-label-focused-foreground = ${colors.barfg}
+label-focused-background = #4c917c
+label-focused-foreground = ${colors.barbg}
 label-focused-padding = ${paddings.inner}
 
 ; unfocused = Inactive workspace on any monitor
@@ -295,8 +298,9 @@ label-unfocused-padding = ${paddings.inner}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-background = ${self.label-focused-background}
-label-visible-foreground = ${colors.barfg}
+;label-visible-background = ${self.label-focused-background}
+label-visible-background = #687480
+label-visible-foreground = ${colors.barbg}
 label-visible-padding = ${paddings.inner}
 
 ; urgent = Workspace with urgency hint set
@@ -305,8 +309,9 @@ label-urgent-background = ${colors.accent}
 label-urgent-foreground = ${colors.bgg5}
 label-urgent-padding = ${paddings.inner}
 
-label-focused-underline-color = #a54253
-label-focused-underline = #e16571
+;label-focused-underline-color = #a54253
+;label-focused-underline = #e16571
+;label-focused-overline = #e16571
 
 ;label-focused-underline-color = #b6258f86
 ;label-focused-underline = #b6258f86
@@ -537,11 +542,11 @@ ramp-capacity-2-padding-left = ${paddings.inner}
 ramp-capacity-3-padding-left = ${paddings.inner}
 ramp-capacity-4-padding-left = ${paddings.inner}
 
-ramp-capacity-0 = batt:
-ramp-capacity-1 = batt:
-ramp-capacity-2 = batt:
-ramp-capacity-3 = batt:
-ramp-capacity-4 = batt:
+ramp-capacity-0 = "  batt:"
+ramp-capacity-1 = "  batt:"
+ramp-capacity-2 = "  batt:"
+ramp-capacity-3 = "  batt:"
+ramp-capacity-4 = "  batt:"
 
 ;ramp-capacity-0 = 
 ;ramp-capacity-1 = 
