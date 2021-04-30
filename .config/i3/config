@@ -243,6 +243,8 @@ exec_always --no-startup-id xrdb -merge ~/.Xresources
 
 exec_always --no-startup-id autotiling
 
+exec_always --no-startup-id xmousepasteblock
+
 exec_always --no-startup-id feh --bg-fill ~/pictures/wallpaper/202631.png
 
 # exec_always --no-startup-id ~/scripts/launch_polybar_2
