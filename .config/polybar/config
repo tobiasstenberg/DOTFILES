@@ -278,36 +278,40 @@ pin-workspaces = true
 
 format-foreground = ${colors.barfg}
 format-background = ${colors.bgg3}
-format-padding-left = 20
+; format-padding-left = 20
 
 label-mode-foreground = ${colors.barbg}
 label-mode-background = ${colors.accent}
-label-mode-padding = ${paddings.inner}
+label-mode-padding = 1
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = #4c917c
 label-focused-foreground = ${colors.barbg}
-label-focused-padding = ${paddings.inner}
+; label-unfocused-padding = ${paddings.inner}
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
 label-unfocused-background = ${colors.bgg2}
 label-unfocused-foreground = ${colors.barfg}
-label-unfocused-padding = ${paddings.inner}
+; label-unfocused-padding = ${paddings.inner}
+label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 ;label-visible-background = ${self.label-focused-background}
 label-visible-background = #687480
 label-visible-foreground = ${colors.barbg}
-label-visible-padding = ${paddings.inner}
+; label-visible-padding = ${paddings.inner}
+label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-background = ${colors.accent}
 label-urgent-foreground = ${colors.bgg5}
-label-urgent-padding = ${paddings.inner}
+; label-urgent-padding = ${paddings.inner}
+label-urgent-padding = 1
 
 ;label-focused-underline-color = #a54253
 ;label-focused-underline = #e16571
@@ -370,7 +374,7 @@ click-left = dunstify -r 767 -u LOW -t 10000 "CPU HOGS:                       $(
 
 [module/cpu]
 type = internal/cpu
-label = %percentage:2%% / 
+label = %percentage:2%% 
 ;label =  %percentage%%
 label-padding-right = 1.7
 label-background = ${colors.bgg3}

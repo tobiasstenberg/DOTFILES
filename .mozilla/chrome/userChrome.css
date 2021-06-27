@@ -6,6 +6,8 @@
   background-repeat: none !important;
   background-size: none !important;
   border-top: 1px solid #deaf64 !important;
+  margin-top: 0 !important;
+  border-radius: 0px !important;
 }
 
 toolbar,
